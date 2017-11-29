@@ -25,8 +25,13 @@
         </Grid.RowDefinitions>
 
 
-        <Button Grid.Column="1" Grid.Row="2" Content="Opret ny henvendelse" Width="Auto" HorizontalAlignment="Center"></Button>
-        <Button Grid.Column="2" Grid.Row="2" Content="Opret ny henvendelse" Width="Auto" HorizontalAlignment="Center"></Button>
+        <Button x:Name="CreateNewOrderButton" Grid.Column="1" Grid.Row="2" Content="Opret ny henvendelse" Width="225" HorizontalAlignment="Right" FontSize="16" Height="70" Margin="0,0,20,0"></Button>
+        <Button x:Name="OrderListButton" Grid.Column="2" Grid.Row="2" Content="Ordrer" Width="225" HorizontalAlignment="Left"  FontSize="16" Height="70" Margin="20,0,0,0"></Button>
+        <Button x:Name="CallbacksButton" Grid.Column="1" Grid.Row="3" Content="Callbacks" Width="225" HorizontalAlignment="Right"  FontSize="16" Height="70" Margin="0,0,20,0"></Button>
+        <Button x:Name="CreateNewContactButton" Grid.Column="2" Grid.Row="3" Content="Opret ny kontakt" Width="225" HorizontalAlignment="Left"  FontSize="16" Height="70" Margin="20,0,0,0"></Button>
+        <Button x:Name="MessagesButton" Grid.Column="1" Grid.Row="4" Content="Beskeder" Width="225" HorizontalAlignment="Right"  FontSize="16" Height="70" Margin="0,0,20,0"/>
+        <Button x:Name="OverviewButton" Grid.Column="2" Grid.Row="4" Content="Oversigt" Width="225" HorizontalAlignment="Left"  FontSize="16" Height="70" Margin="20,0,0,0"></Button>
+
 
 
 
