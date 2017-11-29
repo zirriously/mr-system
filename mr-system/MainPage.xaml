@@ -31,6 +31,9 @@
         <Button x:Name="CreateNewContactButton" Grid.Column="2" Grid.Row="3" Content="Opret ny kontakt" Width="225" HorizontalAlignment="Left"  FontSize="16" Height="70" Margin="20,0,0,0"></Button>
         <Button x:Name="MessagesButton" Grid.Column="1" Grid.Row="4" Content="Beskeder" Width="225" HorizontalAlignment="Right"  FontSize="16" Height="70" Margin="0,0,20,0"/>
         <Button x:Name="OverviewButton" Grid.Column="2" Grid.Row="4" Content="Oversigt" Width="225" HorizontalAlignment="Left"  FontSize="16" Height="70" Margin="20,0,0,0"></Button>
+        <Button x:Name="SettingsButton" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top"  Width="32" Height="32" Margin="0,20,20,0" Padding="0" BorderThickness="0" Background="Transparent">
+            <Image x:Name="SettingsButtonImage" Source="Assets/Image-gear.png" Stretch="Fill" Width="32" Height="32" Margin="0,0,0,0"/>
+        </Button>
 
 
 
