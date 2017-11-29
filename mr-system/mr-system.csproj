@@ -281,6 +281,7 @@
     <Content Include="Assets\Image-unverified.png" />
     <Content Include="Assets\Image-verified.png" />
     <Content Include="Assets\Image-versions.png" />
+    <Content Include="Assets\splashscreen.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
