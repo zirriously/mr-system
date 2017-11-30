@@ -64,12 +64,18 @@ namespace mr_system
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
 
         private void ForwardButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (Frame.CanGoForward)
+            {
+                Frame.GoForward();
+            }
         }
     }
 }
