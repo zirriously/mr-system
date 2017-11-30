@@ -8,6 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <!-- Til ordreoversigt (liste) og oprettelse af ny forespørgsel-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid Grid.Column="1">
+            <!-- Til information om ordren valgt, med knapper relateret til ordren -->
+        </Grid>
     </Grid>
 </Page>
