@@ -19,12 +19,33 @@
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="80*"/>
             </Grid.RowDefinitions>
-            <ListBox x:Name="OrdersListBox" Grid.Row="2" Width="Auto" Height="Auto" Margin="10,10,10,10"/>
-            <Rectangle Grid.Row="1" Width="Auto" Height="Auto" Margin="10,10,10,10" Fill="DimGray"/>
-            <Button x:Name="CreateNewOrderButton" Grid.Row="0" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,10" Content="Opret ny forespørgsel"/>
+            <ListBox x:Name="OrdersListBox" Grid.Row="2" Width="Auto" Height="Auto" Margin="5"/>
+            <Button x:Name="CreateNewOrderButton" Grid.Row="0" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Content="Opret ny forespørgsel"/>
+            <Grid Grid.Row="1" Width="Auto" Height="Auto" Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Column="0" Grid.ColumnSpan="4" Width="Auto" Height="Auto" Margin="5" Fill="DarkGray"/>
+                <TextBlock Text="Filters" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Content="Ordre ID" Height="Auto" VerticalAlignment="Stretch" Grid.Column="1" HorizontalAlignment="Stretch" Width="Auto" Margin="0,5,0,5" FontSize="12"/>
+                <Button Content="CVR" Height="Auto" VerticalAlignment="Stretch" Grid.Column="2" HorizontalAlignment="Stretch" Width="Auto" Margin="0,5,0,5" FontSize="12"/>
+                <Button Content="Kontakt" Height="Auto" VerticalAlignment="Stretch" Grid.Column="3" HorizontalAlignment="Stretch" Width="Auto" Margin="0,5,5,5" FontSize="12"/>
+            </Grid>
         </Grid>
         <Grid Grid.Column="1">
             <!-- Til information om ordren valgt, med knapper relateret til ordren -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Rectangle Width="Auto" Height="Auto" Grid.Row="1" Margin="5" Fill="LightGray" Grid.RowSpan="3"/>
+            <Button x:Name="AcceptOrderButton" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Content="Accepter ordre" Margin="5"/>
+            <TextBlock Grid.Row="1" Text="Ordreoplysninger" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,5,5"/>
         </Grid>
     </Grid>
 </Page>
