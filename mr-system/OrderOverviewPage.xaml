@@ -19,6 +19,9 @@
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="80*"/>
             </Grid.RowDefinitions>
+            <ListBox x:Name="OrdersListBox" Grid.Row="2" Width="Auto" Height="Auto" Margin="10,10,10,10"/>
+            <Rectangle Grid.Row="1" Width="Auto" Height="Auto" Margin="10,10,10,10" Fill="DimGray"/>
+            <Button x:Name="CreateNewOrderButton" Grid.Row="0" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,10" Content="Opret ny forespørgsel"/>
         </Grid>
         <Grid Grid.Column="1">
             <!-- Til information om ordren valgt, med knapper relateret til ordren -->
