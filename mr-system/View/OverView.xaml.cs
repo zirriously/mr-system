@@ -27,9 +27,12 @@ namespace mr_system
             this.InitializeComponent();
         }
 
+        public string ClickedPage;
+
         private void OverviewButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OrderOverviewPage));
+            Frame.Navigate(typeof(MainPage));
+            ClickedPage = "OverView";
         }
 
         private void MessagesButton_OnClick(object sender, RoutedEventArgs e)
