@@ -25,6 +25,7 @@ namespace mr_system
         public OrderOverviewPage()
         {
             this.InitializeComponent();
+
         }
     }
 }
