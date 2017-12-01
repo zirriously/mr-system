@@ -25,6 +25,7 @@ namespace mr_system
         public MainPage()
         {
             this.InitializeComponent();
+            //RootFrame.Navigate(typeof(OverView)); // Navigerer til given frame ved initialisering ( ikke OverView )
         }
     }
 }
