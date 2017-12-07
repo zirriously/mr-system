@@ -35,7 +35,7 @@ namespace mr_system
 
             foreach (NavigationViewItemBase item in NavView.MenuItems)
             {
-                if (item is NavigationViewItem && item.Tag.ToString() == "apps")
+                if (item is NavigationViewItem && item.Tag.ToString() == "OrderOverView")
                 {
                     NavView.SelectedItem = item;
                     break;
@@ -56,6 +56,10 @@ namespace mr_system
                     case "OrderOverView":
                         ContentFrame.Navigate(typeof(OrderOverviewPage));
                         break;
+
+                    case "CustomerOverView":
+                        ContentFrame.Navigate(typeof(CustomerOverViewPage));
+                        break;
                 }
             }
         }
@@ -75,6 +79,10 @@ namespace mr_system
                 {
                     case "orderOverView":
                        ContentFrame.Navigate(typeof(OrderOverviewPage));
+                        break;
+
+                    case "customerOverView":
+                        ContentFrame.Navigate(typeof(CustomerOverViewPage));
                         break;
                 }
             }

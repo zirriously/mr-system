@@ -1,25 +1,27 @@
 ﻿<Page
-    x:Class="mr_system.OrderOverviewPage"
+    x:Class="mr_system.View.CustomerOverViewPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:mr_system"
+    xmlns:local="using:mr_system.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView  ItemsSource="{}" SelectionChanged="ListView_SelectionChanged">
+        <ListView  ItemsSource="{}">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Grid Padding="12">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        <TextBlock Grid.Column="1" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        <TextBlock Grid.Column="2" Text="Deadline" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                        <TextBlock Grid.Column="1" Text="Telefon nr" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                        <TextBlock Grid.Column="2" Text="Mail" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                        <TextBlock Grid.Column="3" Text="Adresse" Style="{ThemeResource CaptionTextBlockStyle}"/>
                     </Grid>
                 </DataTemplate>
             </ListView.HeaderTemplate>
@@ -27,13 +29,15 @@
                 <DataTemplate>
                     <Grid Height="48" AutomationProperties.Name="{}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{}" />
                         <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{}"/>
                         <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{}"/>
+                        <TextBlock Grid.Column="3" VerticalAlignment="Center" Text="{}"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
