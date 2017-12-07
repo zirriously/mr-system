@@ -10,7 +10,6 @@
             <Setter Property="MaxWidth" Value="0"/>
         </Style>
     </Application.Resources>
-
 </Application>
 
     

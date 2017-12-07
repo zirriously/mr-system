@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -18,20 +19,24 @@ using Windows.UI.Xaml.Navigation;
 
 namespace mr_system
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
-           
         }
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(typeof(OrderOverviewPage));
+
+            foreach (NavigationViewItemBase item in NavView.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "overView")
+                {
+                    NavView.SelectedItem = item;
+                    break;
+                }
+            }
         }
 
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -44,6 +49,10 @@ namespace mr_system
             {
                 switch (args.InvokedItem)
                 {
+                    case "overView":
+                        ContentFrame.Navigate(typeof(OverViewPage));
+                        break;
+
                     case "OrderOverView":
                         ContentFrame.Navigate(typeof(OrderOverviewPage));
                         break;
@@ -68,6 +77,10 @@ namespace mr_system
 
                 switch (item.Tag)
                 {
+                    case "overView":
+                        ContentFrame.Navigate(typeof(OverViewPage));
+                        break;
+
                     case "orderOverView":
                        ContentFrame.Navigate(typeof(OrderOverviewPage));
                         break;

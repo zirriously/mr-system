@@ -14,9 +14,10 @@
                     OpenPaneLength="200">
 
         <NavigationView.MenuItems>
-            <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView" Margin="0,20,0,0">
+            <NavigationViewItem Icon="Home" Content="Overblik" Tag="overView" Margin="0,20,0,0">
             </NavigationViewItem>
-            <NavigationViewItemSeparator/>
+            <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView">
+            </NavigationViewItem>
             <NavigationViewItem Icon="People" Content="Kundekartotek" Tag="customerOverView"/>
         </NavigationView.MenuItems>
 
@@ -56,6 +57,5 @@
                 </TransitionCollection>
             </Frame.ContentTransitions>
         </Frame>
-
     </NavigationView>
 </Page>
