@@ -13,9 +13,9 @@
                 <DataTemplate>
                     <Grid Padding="12">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="408"/>
-                            <ColumnDefinition Width="360"/>
-                            <ColumnDefinition Width="360"/>
+                            <ColumnDefinition Width="33.3*"/>
+                            <ColumnDefinition Width="33.3*"/>
+                            <ColumnDefinition Width="33.3*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
                         <TextBlock Grid.Column="1" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>

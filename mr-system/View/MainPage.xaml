@@ -13,10 +13,7 @@
                     Loaded="NavView_Loaded">
 
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Ordre liste" Tag="orderOverView" Margin="0,20,0,0">
-                <NavigationViewItem.Icon>
-                    <FontIcon Glyph="&#xE10F;"/>
-                </NavigationViewItem.Icon>
+            <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView" Margin="0,20,0,0">
             </NavigationViewItem>
             <NavigationViewItemSeparator/>
             <NavigationViewItem Icon="People" Content="Kundekartotek" Tag="customerOverView"/>
@@ -44,14 +41,14 @@
                             VerticalAlignment="Center"
                             DefaultLabelPosition="Right"
                             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                        <AppBarButton Label="Refresh" Icon="Refresh"/>
-                        <AppBarButton Label="Import" Icon="Import"/>
+                        <AppBarButton Label="Opret ny ordre " Icon="Add"/>
+                        <AppBarButton Icon="Refresh"/>
                     </CommandBar>
                 </Grid>
             </DataTemplate>
         </NavigationView.HeaderTemplate>
 
-        <Frame x:Name="ContentFrame" Margin="50">
+        <Frame x:Name="ContentFrame" Margin="20">
             <Frame.ContentTransitions>
                 <TransitionCollection>
                     <NavigationThemeTransition/>
