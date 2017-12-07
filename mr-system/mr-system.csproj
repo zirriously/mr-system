@@ -102,9 +102,6 @@
     <Compile Include="View\OrderOverviewPage.xaml.cs">
       <DependentUpon>OrderOverviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\OverView.xaml.cs">
-      <DependentUpon>OverView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -300,10 +297,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\OrderOverviewPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\OverView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

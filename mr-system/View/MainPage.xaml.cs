@@ -25,7 +25,58 @@ namespace mr_system
         public MainPage()
         {
             this.InitializeComponent();
-            //RootFrame.Navigate(typeof(OverView)); // Navigerer til given frame ved initialisering ( ikke OverView )
+           
+        }
+
+        private void NavView_Loaded(object sender, RoutedEventArgs e)
+        {
+            NavView.MenuItems.Add(new NavigationViewItemSeparator());
+
+            foreach (NavigationViewItemBase item in NavView.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "apps")
+                {
+                    NavView.SelectedItem = item;
+                    break;
+                }
+            }
+        }
+
+        private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            if (args.IsSettingsInvoked)
+            {
+                //ContentFrame.Navigate(typeof(SettingsPage));
+            }
+            else
+            {
+                switch (args.InvokedItem)
+                {
+                    case "OrderOverView":
+                       // ContentFrame.Navigate(typeof(OrderOverViewPage));
+                        break;
+                }
+            }
+        }
+
+        private void NavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            if (args.IsSettingsSelected)
+            {
+               // ContentFrame.Navigate(typeof(SettingsPage));
+            }
+            else
+            {
+
+                NavigationViewItem item = args.SelectedItem as NavigationViewItem;
+
+                switch (item.Tag)
+                {
+                    case "orderOverView":
+                       // ContentFrame.Navigate(typeof(OrderOverViewPage));
+                        break;
+                }
+            }
         }
     }
 }
