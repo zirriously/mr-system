@@ -13,32 +13,33 @@
                     Loaded="NavView_Loaded">
 
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Ordre liste" Tag="orderOverView">
+            <NavigationViewItem Content="Ordre liste" Tag="orderOverView" Margin="0,20,0,0">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE10F;"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
             <NavigationViewItemSeparator/>
-            <NavigationViewItemHeader Content="Main pages"/>
-            <NavigationViewItem Icon="AllApps" Content="Kundekartotek" Tag="customerOverView"/>
+            <NavigationViewItem Icon="People" Content="Kundekartotek" Tag="customerOverView"/>
         </NavigationView.MenuItems>
 
         <NavigationView.AutoSuggestBox>
             <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
         </NavigationView.AutoSuggestBox>
 
-        <NavigationView.HeaderTemplate>
-            <DataTemplate>
-                <Grid Margin="24,24,0,0" Height="24">
+        <NavigationView.HeaderTemplate >
+            <DataTemplate >
+                <Grid Margin="24,24,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                           Height="50"
                            FontSize="28"
                            VerticalAlignment="Center"
                            Text="Velkommen"/>
                     <CommandBar Grid.Column="1"
+                            Height="50"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             DefaultLabelPosition="Right"
@@ -50,7 +51,7 @@
             </DataTemplate>
         </NavigationView.HeaderTemplate>
 
-        <Frame x:Name="ContentFrame" Margin="24">
+        <Frame x:Name="ContentFrame" Margin="50">
             <Frame.ContentTransitions>
                 <TransitionCollection>
                     <NavigationThemeTransition/>

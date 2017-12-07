@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mr_system.View;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -46,14 +47,14 @@ namespace mr_system
         {
             if (args.IsSettingsInvoked)
             {
-                //ContentFrame.Navigate(typeof(SettingsPage));
+                ContentFrame.Navigate(typeof(SettingsPage));
             }
             else
             {
                 switch (args.InvokedItem)
                 {
                     case "OrderOverView":
-                       // ContentFrame.Navigate(typeof(OrderOverViewPage));
+                        ContentFrame.Navigate(typeof(OrderOverviewPage));
                         break;
                 }
             }
@@ -63,7 +64,7 @@ namespace mr_system
         {
             if (args.IsSettingsSelected)
             {
-               // ContentFrame.Navigate(typeof(SettingsPage));
+               ContentFrame.Navigate(typeof(SettingsPage));
             }
             else
             {
@@ -73,7 +74,7 @@ namespace mr_system
                 switch (item.Tag)
                 {
                     case "orderOverView":
-                       // ContentFrame.Navigate(typeof(OrderOverViewPage));
+                       ContentFrame.Navigate(typeof(OrderOverviewPage));
                         break;
                 }
             }
