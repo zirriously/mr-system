@@ -19,7 +19,7 @@
                             <ColumnDefinition Width="25*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        <TextBlock Grid.Column="1" Text="Telefon nr" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                        <TextBlock Grid.Column="1" Text="Telefon" Style="{ThemeResource CaptionTextBlockStyle}"/>
                         <TextBlock Grid.Column="2" Text="Mail" Style="{ThemeResource CaptionTextBlockStyle}"/>
                         <TextBlock Grid.Column="3" Text="Adresse" Style="{ThemeResource CaptionTextBlockStyle}"/>
                     </Grid>

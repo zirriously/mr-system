@@ -31,16 +31,7 @@ namespace mr_system
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
-            NavView.MenuItems.Add(new NavigationViewItemSeparator());
-
-            foreach (NavigationViewItemBase item in NavView.MenuItems)
-            {
-                if (item is NavigationViewItem && item.Tag.ToString() == "OrderOverView")
-                {
-                    NavView.SelectedItem = item;
-                    break;
-                }
-            }
+            ContentFrame.Navigate(typeof(OrderOverviewPage));
         }
 
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)

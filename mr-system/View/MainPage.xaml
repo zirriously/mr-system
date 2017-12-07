@@ -10,7 +10,8 @@
     <NavigationView x:Name="NavView"
                     ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
-                    Loaded="NavView_Loaded">
+                    Loaded="NavView_Loaded"
+                    OpenPaneLength="200">
 
         <NavigationView.MenuItems>
             <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView" Margin="0,20,0,0">
@@ -25,7 +26,7 @@
 
         <NavigationView.HeaderTemplate >
             <DataTemplate >
-                <Grid Margin="24,24,0,0">
+                <Grid Margin="24,0,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition/>
@@ -41,8 +42,8 @@
                             VerticalAlignment="Center"
                             DefaultLabelPosition="Right"
                             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                        <AppBarButton Label="Opret ny ordre " Icon="Add"/>
-                        <AppBarButton Icon="Refresh"/>
+                        <AppBarButton Height="50" Label="Opret ny ordre " Icon="Add"/>
+                        <AppBarButton Height="50" Icon="Refresh"/>
                     </CommandBar>
                 </Grid>
             </DataTemplate>
