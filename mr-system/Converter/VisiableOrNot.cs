@@ -11,9 +11,13 @@ namespace mr_system.Converter
             Uri uri = new Uri(value.ToString());
             if (uri != null)
             {
-                if (uri.Equals("/View/App/MainPage.xaml"))
+                if (uri.Equals("/View/App/OverView.xaml"))
                 {
                     return Visibility.Visible;
+                }
+                else if (uri.Equals("/View/App/MainPage.xaml"))
+                {
+                    
                 }
             }
             return Visibility.Collapsed;
