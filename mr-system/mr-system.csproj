@@ -96,23 +96,23 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Command\RelayCommand.cs" />
-    <Compile Include="Model\Domain\Customer.cs" />
-    <Compile Include="Model\Domain\Orders.cs" />
-    <Compile Include="View\Domain\CustomerOverViewPage.xaml.cs">
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Orders.cs" />
+    <Compile Include="View\CustomerOverViewPage.xaml.cs">
       <DependentUpon>CustomerOverViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\App\MainPage.xaml.cs">
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\OrderOverviewLogic.cs" />
-    <Compile Include="View\Domain\OrderOverviewPage.xaml.cs">
+    <Compile Include="View\OrderOverviewPage.xaml.cs">
       <DependentUpon>OrderOverviewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Domain\OverViewPage.xaml.cs">
+    <Compile Include="View\OverViewPage.xaml.cs">
       <DependentUpon>OverViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\App\SettingsPage.xaml.cs">
+    <Compile Include="View\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -304,23 +304,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\Domain\CustomerOverViewPage.xaml">
+    <Page Include="View\CustomerOverViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\App\MainPage.xaml">
+    <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Domain\OrderOverviewPage.xaml">
+    <Page Include="View\OrderOverviewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Domain\OverViewPage.xaml">
+    <Page Include="View\OverViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\App\SettingsPage.xaml">
+    <Page Include="View\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -331,10 +331,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\App\" />
-    <Folder Include="Model\Base\" />
-    <Folder Include="ViewModel\App\" />
-    <Folder Include="ViewModel\Domain\" />
+    <Folder Include="MVVMStarterLibrary\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
