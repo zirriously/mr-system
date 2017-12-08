@@ -43,7 +43,7 @@ namespace mr_system
                 }
             }
 
-            public string Adr
+            public string Adresse
             {
                 get { return _domainObject.Adresse; }
                 set
@@ -53,7 +53,7 @@ namespace mr_system
                 }
             }
 
-            public double postnr
+            public double PostNummer
             {
                 get { return _domainObject.PostNummer; }
                 set
@@ -63,7 +63,7 @@ namespace mr_system
                 }
             }
 
-            public double Tlf
+            public double TelefonNummer
             {
                 get { return _domainObject.TelefonNummer; }
                 set
@@ -73,7 +73,7 @@ namespace mr_system
                 }
             }
 
-            public string Email
+            public string EmailAddresse
             {
                 get { return _domainObject.EmailAddresse; }
                 set
@@ -82,7 +82,7 @@ namespace mr_system
                     OnPropertyChanged();
                 }
             }
-            public string Info
+            public string Information
             {
                 get { return _domainObject.Information; }
                 set
@@ -92,7 +92,7 @@ namespace mr_system
                 }
             }
 
-            public string ForLev
+            public string ForventetLevering
             {
                 get { return _domainObject.ForventetLevering; }
                 set
