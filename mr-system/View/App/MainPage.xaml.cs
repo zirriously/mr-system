@@ -26,6 +26,8 @@ namespace mr_system
             this.InitializeComponent();
         }
 
+        bool IsShowBtn = false;
+
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
             foreach (NavigationViewItemBase item in NavView.MenuItems)
@@ -49,7 +51,7 @@ namespace mr_system
                 switch (args.InvokedItem)
                 {
                     case "overView":
-                        ContentFrame.Navigate(typeof(OverViewPage));
+                        ContentFrame.Navigate(typeof(OverViewPage));       
                         break;
 
                     case "OrderOverView":
