@@ -41,6 +41,9 @@
                            FontSize="28"
                            VerticalAlignment="Center"
                            Text="Velkommen"/>
+                        <CommandBar>
+                            <AppBarButton Height="50" Icon="Refresh"/>
+                        </CommandBar>
                         <CommandBar Grid.Column="1"
                             Height="50"
                             HorizontalAlignment="Right"
