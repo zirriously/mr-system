@@ -8,30 +8,30 @@ public class Customer
     private int _cvr;
     private string _navn;
     private string _att;
-    private double _adresse;
+    private string _adresse;
     private int _postnr;
     private int _tlf;
-    private double _email;
-    private double _info;
-    private double _forventetLevering;
+    private string _email;
+    private string _info;
+    private string _forventetLevering;
 
-    public Customer(int cvr, string navn, string att, double _adresse, int postnr, int tlf, double email, double info, double forventetlevering)
+    public Customer(int cvr, string navn, string att, string adresse, int postnr, int tlf, string email, string info, string forventetlevering)
     {
         _cvr = cvr;
         _navn = navn;
         _att = att;
-        _adresse = adr;
+        _adresse = adresse;
         _postnr = postnr;
         _tlf = tlf;
         _email = email;
         _info = info;
-        _forventetLevering = forlev;
+        _forventetLevering = forventetlevering;
 
     }
 
     public int cvr
     {
-        get { return _cvr; } 
+        get { return _cvr; }
         set { _cvr = value; }
     }
 
@@ -44,22 +44,22 @@ public class Customer
     public string att
     {
         get { return _att; }
-         set { _att = value; }
+        set { _att = value; }
     }
 
     public string adr
     {
-        get { return _adr;}
-        set { _adr = value;}
+        get { return _adresse; }
+        set { _adresse = value; }
     }
 
-    public string postnr
+    public int postnr
     {
         get { return _postnr; }
         set { _postnr = value; }
     }
 
-    public string tlf
+    public int tlf
     {
         get { return _tlf; }
         set { _tlf = value; }
@@ -68,19 +68,18 @@ public class Customer
     public string email
     {
         get { return _email; }
-        set {_email = value; }
+        set { _email = value; }
     }
     public string info
     {
         get { return _info; }
-        set {_info = value; }
+        set { _info = value; }
     }
 
     public string forLev
     {
-        get { return _forLev; }
-        set { _forLev = value; }
+        get { return _forventetLevering; }
+        set { _forventetLevering = value; }
     }
 }
-
 
