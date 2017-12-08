@@ -15,12 +15,6 @@ public class Customer
     private string _info;
     private string _forventetLevering;
 
-    public Customer()
-    {
-       
-
-    }
-
     public double Cvr
     {
         get { return _cvr; }
