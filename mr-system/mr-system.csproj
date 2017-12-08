@@ -316,7 +316,6 @@
     <Folder Include="DLL\" />
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
-    <Folder Include="Model\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\App\MainPage.xaml">
