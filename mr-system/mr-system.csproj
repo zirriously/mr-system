@@ -99,7 +99,7 @@
     <Compile Include="Model\Domain\Customer.cs" />
     <Compile Include="Model\Domain\Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Converter\VisiableOrNot.cs" />
+    <Compile Include="ViewModel\App\VisiableOrNot.cs" />
     <Compile Include="ViewModel\Domain\CustomerViewModel.cs" />
     <Compile Include="ViewModel\Domain\OrderOverviewLogic.cs" />
     <Compile Include="View\App\MainPage.xaml.cs">
@@ -316,8 +316,6 @@
     <Folder Include="DLL\" />
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
-    <Folder Include="Model\NewFolder1\" />
-    <Folder Include="ViewModel\App\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\App\MainPage.xaml">
