@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Orders.cs" />
     <Compile Include="View\CustomerOverViewPage.xaml.cs">

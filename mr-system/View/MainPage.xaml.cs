@@ -28,7 +28,6 @@ namespace mr_system
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
-
             foreach (NavigationViewItemBase item in NavView.MenuItems)
             {
                 if (item is NavigationViewItem && item.Tag.ToString() == "overView")
