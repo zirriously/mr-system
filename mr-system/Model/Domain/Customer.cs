@@ -15,17 +15,9 @@ public class Customer
     private string _info;
     private string _forventetLevering;
 
-    public Customer(double cvr, string navn, string att, string adresse, double postnr, double tlf, string email, string info, string forventetlevering)
+    public Customer()
     {
-        _cvr = cvr;
-        _navn = navn;
-        _att = att;
-        _adresse = adresse;
-        _postnr = postnr;
-        _tlf = tlf;
-        _email = email;
-        _info = info;
-        _forventetLevering = forventetlevering;
+       
 
     }
 
