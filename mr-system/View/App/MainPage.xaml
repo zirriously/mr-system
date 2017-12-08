@@ -5,57 +5,62 @@
     xmlns:local="using:mr_system"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:app="using:mr_system.ViewModel.App"
     mc:Ignorable="d">
-    
-    <NavigationView x:Name="NavView"
+    <Grid>
+        <Grid.Resources>
+            <app:VisiableOrNot x:Key="Cvt" />
+        </Grid.Resources>
+        <NavigationView x:Name="NavView"
                     ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
                     Loaded="NavView_Loaded"
                     OpenPaneLength="200">
 
-        <NavigationView.MenuItems>
-            <NavigationViewItem Icon="Home" Content="Overblik" Tag="overView" Margin="0,20,0,0">
-            </NavigationViewItem>
-            <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView">
-            </NavigationViewItem>
-            <NavigationViewItem Icon="People" Content="Kunder" Tag="customerOverView"/>
-        </NavigationView.MenuItems>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Home" Content="Overblik" Tag="overView" Margin="0,20,0,0">
+                </NavigationViewItem>
+                <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView">
+                </NavigationViewItem>
+                <NavigationViewItem Icon="People" Content="Kunder" Tag="customerOverView"/>
+            </NavigationView.MenuItems>
 
-        <NavigationView.AutoSuggestBox>
-            <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
-        </NavigationView.AutoSuggestBox>
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
+            </NavigationView.AutoSuggestBox>
 
-        <NavigationView.HeaderTemplate >
-            <DataTemplate >
-                <Grid Margin="24,0,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+            <NavigationView.HeaderTemplate >
+                <DataTemplate >
+                    <Grid Margin="24,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Style="{StaticResource TitleTextBlockStyle}"
                            Height="50"
                            FontSize="28"
                            VerticalAlignment="Center"
                            Text="Velkommen"/>
-                    <CommandBar Grid.Column="1"
+                        <CommandBar Grid.Column="1"
                             Height="50"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             DefaultLabelPosition="Right"
                             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                        <AppBarButton Height="50" Label="Opret ny ordre " Icon="Add"/>
-                        <AppBarButton Height="50" Icon="Refresh"/>
-                    </CommandBar>
-                </Grid>
-            </DataTemplate>
-        </NavigationView.HeaderTemplate>
+                            <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Visibility="{Binding ElementName=mainPage, Path=Content.BaseUri.AbsoluteUri, Converter={StaticResource Cvt}}"/>
+                            <AppBarButton Height="50" Icon="Refresh"/>
+                        </CommandBar>
+                    </Grid>
+                </DataTemplate>
+            </NavigationView.HeaderTemplate>
 
-        <Frame x:Name="ContentFrame" Margin="20">
-            <Frame.ContentTransitions>
-                <TransitionCollection>
-                    <NavigationThemeTransition/>
-                </TransitionCollection>
-            </Frame.ContentTransitions>
-        </Frame>
-    </NavigationView>
+            <Frame x:Name="ContentFrame" Margin="20">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
+    </Grid>
 </Page>
