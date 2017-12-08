@@ -62,7 +62,7 @@ public class Customer
     public double TelefonNummer
     {
         get { return _tlf; }
-        set { _tlf = value; }
+        set { _tlf = value; } 
     }
 
     public string EmailAddresse
