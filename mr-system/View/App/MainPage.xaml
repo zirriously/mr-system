@@ -51,7 +51,7 @@
                             VerticalAlignment="Center"
                             DefaultLabelPosition="Right"
                             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                            <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Visibility="{Binding ElementName=ContentFrame, Path=, Converter={StaticResource Cvt}}"/>
+                            <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Visibility="{Binding ElementName=ContentFrame, Path=Content.BaseUri.AbsoluteUri, Converter={StaticResource Cvt}}"/>
                             <AppBarButton Height="50" Icon="Refresh"/>
                         </CommandBar>
                     </Grid>
