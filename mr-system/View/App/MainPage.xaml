@@ -18,7 +18,7 @@
             </NavigationViewItem>
             <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView">
             </NavigationViewItem>
-            <NavigationViewItem Icon="People" Content="Kundekartotek" Tag="customerOverView"/>
+            <NavigationViewItem Icon="People" Content="Kunder" Tag="customerOverView"/>
         </NavigationView.MenuItems>
 
         <NavigationView.AutoSuggestBox>
