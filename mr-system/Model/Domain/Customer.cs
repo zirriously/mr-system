@@ -29,54 +29,54 @@ public class Customer
 
     }
 
-    public double cvr
+    public double Cvr
     {
         get { return _cvr; }
         set { _cvr = value; }
     }
 
-    public string navn
+    public string Navn
     {
         get { return _navn; }
         set { _navn = value; }
     }
 
-    public string att
+    public string Att
     {
         get { return _att; }
         set { _att = value; }
     }
 
-    public string adr
+    public string Adresse
     {
         get { return _adresse; }
         set { _adresse = value; }
     }
 
-    public double postnr
+    public double PostNummer
     {
         get { return _postnr; }
         set { _postnr = value; }
     }
 
-    public double tlf
+    public double TelefonNummer
     {
         get { return _tlf; }
         set { _tlf = value; }
     }
 
-    public string email
+    public string EmailAddresse
     {
         get { return _email; }
         set { _email = value; }
     }
-    public string info
+    public string Information
     {
         get { return _info; }
         set { _info = value; }
     }
 
-    public string forLev
+    public string ForventetLevering
     {
         get { return _forventetLevering; }
         set { _forventetLevering = value; }
