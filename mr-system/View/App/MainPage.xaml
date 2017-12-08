@@ -5,12 +5,15 @@
     xmlns:local="using:mr_system"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:app="using:mr_system.ViewModel.App"
+    xmlns:converter="using:mr_system.Converter"
     mc:Ignorable="d">
+    
     <Grid>
+        
         <Grid.Resources>
-            <app:VisiableOrNot x:Key="Cvt" />
+            <converter:VisiableOrNot x:Key="Cvt" />
         </Grid.Resources>
+        
         <NavigationView x:Name="NavView"
                     ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
@@ -49,7 +52,7 @@
                             DefaultLabelPosition="Right"
                             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
                             <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Visibility="{Binding ElementName=ContentFrame, Path=Content.BaseUri.AbsoluteUri, Converter={StaticResource Cvt}}"/>
-                            <AppBarButton Height="50" Icon="Refresh"/>
+                            <AppBarButton Height="50" Icon="Refresh" Visibility="{Binding ElementName=ContentFrame, Path=Content.BaseUri.AbsoluteUri, Converter={StaticResource Cvt}}"/>
                         </CommandBar>
                     </Grid>
                 </DataTemplate>

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
-namespace mr_system.ViewModel.App
+namespace mr_system.Converter
 {
     public class VisiableOrNot : IValueConverter
     {
@@ -15,7 +11,7 @@ namespace mr_system.ViewModel.App
             Uri uri = new Uri(value.ToString());
             if (uri != null)
             {
-                if (uri.Equals("ms-appx:///View/MainPage.xaml"))
+                if (uri.Equals("/View/App/MainPage.xaml"))
                 {
                     return Visibility.Visible;
                 }
