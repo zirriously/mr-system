@@ -5,17 +5,17 @@ using System.Security.Cryptography;
 public class Customer
 {
 
-    private int _cvr;
+    private double _cvr;
     private string _navn;
     private string _att;
     private string _adresse;
-    private int _postnr;
-    private int _tlf;
+    private double _postnr;
+    private double _tlf;
     private string _email;
     private string _info;
     private string _forventetLevering;
 
-    public Customer(int cvr, string navn, string att, string adresse, int postnr, int tlf, string email, string info, string forventetlevering)
+    public Customer(double cvr, string navn, string att, string adresse, double postnr, double tlf, string email, string info, string forventetlevering)
     {
         _cvr = cvr;
         _navn = navn;
@@ -29,7 +29,7 @@ public class Customer
 
     }
 
-    public int cvr
+    public double cvr
     {
         get { return _cvr; }
         set { _cvr = value; }
@@ -53,13 +53,13 @@ public class Customer
         set { _adresse = value; }
     }
 
-    public int postnr
+    public double postnr
     {
         get { return _postnr; }
         set { _postnr = value; }
     }
 
-    public int tlf
+    public double tlf
     {
         get { return _tlf; }
         set { _tlf = value; }
