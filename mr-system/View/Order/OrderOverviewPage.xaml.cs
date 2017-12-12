@@ -25,9 +25,7 @@ namespace mr_system
     {
         public OrderOverviewPage()
         {
-            this.InitializeComponent();
-
-        }
+            this.InitializeComponent();        }
 
         private void NewOrderButton_Click(object sender, RoutedEventArgs e)
         {

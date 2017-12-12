@@ -25,6 +25,39 @@ namespace mr_system.View.Order
         public NewOrderPage()
         {
             this.InitializeComponent();
+            this.myScrollViewer.AddHandler(UIElement.PointerPressedEvent,
+                new PointerEventHandler(myScrollViewer_PointerPressed),
+                true /*handledEventsToo*/);
+            this.myScrollViewer.AddHandler(UIElement.PointerReleasedEvent,
+                new PointerEventHandler(myScrollViewer_PointerReleased),
+                true /*handledEventsToo*/);
+            this.myScrollViewer.AddHandler(UIElement.PointerCanceledEvent,
+                new PointerEventHandler(myScrollViewer_PointerCanceled),
+                true /*handledEventsToo*/);
+        }
+
+        private void myScrollViewer_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Pen)
+            {
+                (myScrollViewer.Content as UIElement).ManipulationMode &= ~ManipulationModes.System;
+            }
+        }
+
+        private void myScrollViewer_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Pen)
+            {
+                (myScrollViewer.Content as UIElement).ManipulationMode |= ManipulationModes.System;
+            }
+        }
+
+        private void myScrollViewer_PointerCanceled(object sender, PointerRoutedEventArgs e)
+        {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Pen)
+            {
+                (myScrollViewer.Content as UIElement).ManipulationMode |= ManipulationModes.System;
+            }
         }
     }
 }
