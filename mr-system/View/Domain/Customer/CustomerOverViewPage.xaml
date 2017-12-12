@@ -5,10 +5,15 @@
     xmlns:local="using:mr_system.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mrSystem="using:mr_system"
     mc:Ignorable="d">
-    
+
+    <Page.DataContext>
+        <mrSystem:CustomerMasterDetailsViewModel/>
+    </Page.DataContext>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView  ItemsSource="{}">
+        <ListView  ItemsSource="{Binding ItemViewModelCollection}">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Grid>
