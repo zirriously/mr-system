@@ -95,15 +95,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Domain\CustomerCatalog.cs" />
-    <Compile Include="ViewModel\Domain\CustomerDetailsViewModel.cs" />
-    <Compile Include="ViewModel\Domain\CustomerItemViewModel.cs" />
-    <Compile Include="ViewModel\Domain\CustomerMasterDetailsViewModel.cs" />
-    <Compile Include="Model\Domain\Customer.cs" />
-    <Compile Include="Model\Domain\Orders.cs" />
+    <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
+    <Compile Include="ViewModel\Domain\Customer\CustomerDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
+    <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
+    <Compile Include="Model\Domain\Customer\Customer.cs" />
+    <Compile Include="Model\Domain\Order\Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\Domain\CustomerViewModel.cs" />
-    <Compile Include="ViewModel\Domain\OrderOverviewLogic.cs" />
+    <Compile Include="ViewModel\Domain\Customer\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\Domain\Order\OrderOverviewLogic.cs" />
     <Compile Include="View\App\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

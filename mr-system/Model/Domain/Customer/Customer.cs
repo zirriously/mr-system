@@ -4,10 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 
 public class Customer : INotifyPropertyChanged
-
 {
-   
-
     public Customer(string navn, string email, double tlf, string adresse)
     {
         Key = -1;
