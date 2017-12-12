@@ -9,22 +9,61 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Grid.Column="0">
-            <TextBlock />
-            <TextBlock />
-        </Grid>
+            <Grid Grid.Row="0" Grid.Column="0">
+
+            </Grid>
 
         <Grid Grid.Row="0" Grid.Column="1">
-            
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Vælg eksisterende kunde" Margin="20" />
+                    <ListBox></ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
+                                 PlaceholderText="Indtast CVR" />
+                        <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
+                                 PlaceholderText="Indtast fornavn" />
+                        <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
+                                 PlaceholderText="Indtast efternavn" />
+                        <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" x:Name="Phone" Margin="20" 
+                                 PlaceholderText="Indtast telefon nr" />
+                        <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" x:Name="Mail" Margin="20" 
+                                 PlaceholderText="Indtast email" />
+                        <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" x:Name="Street" Margin="20" 
+                                 PlaceholderText="Indtast gadenavn" />
+                        <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
+                                 PlaceholderText="Indtast By" />
+                        <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
+                                 PlaceholderText="Indtast post nr" />
+                        <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
+                                 PlaceholderText="Indtast information" />
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>
