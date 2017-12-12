@@ -11,9 +11,10 @@
     <Page.DataContext>
         <mrSystem:CustomerMasterDetailsViewModel/>
     </Page.DataContext>
+   
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView  ItemsSource="{}">
+        <ListView  ItemsSource="{Binding}">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Grid>
