@@ -8,7 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
         <ListView  ItemsSource="{}">
             <ListView.HeaderTemplate>
                 <DataTemplate>
@@ -38,21 +37,27 @@
                                 <AppBarButton Height="50" Label="Ny kunde" Icon="Add"/>
                             </CommandBar>
                         </Grid>
-                        <!-- Content -->
                     </Grid>
                 </DataTemplate>
             </ListView.HeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Height="48" AutomationProperties.Name="{}">
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{}" />
-                        <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{}"/>
-                        <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{}"/>
+                        <Grid Column="0">
+                            <StackPanel>
+                                
+                            </StackPanel>
+                        </Grid>
+                        <Grid Column="1">
+                            <StackPanel>
+
+                            </StackPanel>
+                        </Grid>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
