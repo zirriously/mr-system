@@ -34,8 +34,8 @@
                                 VerticalAlignment="Center"
                                 DefaultLabelPosition="Right"
                                 Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                                <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add"/>
-                                <AppBarButton Height="50" Label="Opret ny kunde" Icon="Add"/>
+                                <AppBarButton Height="50" Label="Ny ordre" Icon="Add"/>
+                                <AppBarButton Height="50" Label="Ny kunde" Icon="Add"/>
                             </CommandBar>
                         </Grid>
                         <Grid Padding="12">
