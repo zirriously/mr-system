@@ -110,10 +110,10 @@
     <Compile Include="View\App\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Domain\CustomerOverViewPage.xaml.cs">
+    <Compile Include="View\Domain\Customer\CustomerOverViewPage.xaml.cs">
       <DependentUpon>CustomerOverViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Domain\OrderOverviewPage.xaml.cs">
+    <Compile Include="View\Order\OrderOverviewPage.xaml.cs">
       <DependentUpon>OrderOverviewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\App\OverViewPage.xaml.cs">
@@ -155,11 +155,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Domain\CustomerOverViewPage.xaml">
+    <Page Include="View\Domain\Customer\CustomerOverViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Domain\OrderOverviewPage.xaml">
+    <Page Include="View\Order\OrderOverviewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
