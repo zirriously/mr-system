@@ -11,15 +11,37 @@
         <ListView  ItemsSource="{}" SelectionChanged="ListView_SelectionChanged">
             <ListView.HeaderTemplate>
                 <DataTemplate>
-                    <Grid Padding="12">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
-                            <ColumnDefinition Width="33.3*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        <TextBlock Grid.Column="1" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        <TextBlock Grid.Column="2" Text="Deadline" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                    <Grid>
+                        <Grid Margin="0,-25,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                                       Height="50"
+                                       FontSize="28"
+                                       VerticalAlignment="Center"
+                                       Text="Ordrer"/>
+
+                            <CommandBar Grid.Column="1"
+                                        Height="50"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        DefaultLabelPosition="Right"
+                                        Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+                                <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add"/>
+                            </CommandBar>
+                        </Grid>
+                        <Grid Padding="12" Margin="0,60,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33.3*"/>
+                                <ColumnDefinition Width="33.3*"/>
+                                <ColumnDefinition Width="33.3*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Grid.Column="1" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Grid.Column="2" Text="Deadline" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                        </Grid>
                     </Grid>
                 </DataTemplate>
             </ListView.HeaderTemplate>

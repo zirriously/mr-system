@@ -26,33 +26,7 @@
                 <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
 
-            <NavigationView.HeaderTemplate >
-                <DataTemplate >
-                    <Grid Margin="24,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Style="{StaticResource TitleTextBlockStyle}"
-                           Height="50"
-                           FontSize="28"
-                           VerticalAlignment="Center"
-                           Text="Velkommen"/>
-
-                        <CommandBar Grid.Column="1"
-                            Height="50"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            DefaultLabelPosition="Right"
-                            Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                            <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add"/>
-                            <AppBarButton Height="50" Icon="Refresh"/>
-                        </CommandBar>
-                    </Grid>
-                </DataTemplate>
-            </NavigationView.HeaderTemplate>
-
-            <Frame x:Name="ContentFrame" Margin="20">
+            <Frame x:Name="ContentFrame" Margin="20,-40,20,20">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition/>
