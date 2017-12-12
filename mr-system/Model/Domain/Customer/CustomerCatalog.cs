@@ -15,9 +15,13 @@ namespace mr_system.Model
         public CustomerCatalog()
         {
             _customers = new Dictionary<int, Customer>();
-           
 
+            Create(new Customer("Albert", "hej", 14, "vej 2"));
+            Create(new Customer("Per", "ff", 4, "ff 4"));
+            Create(new Customer("Tristan", "smart@gmail.com", 2222, "ff 5"));
         }
+
+
 
         public List<Customer> Customers
         {

@@ -24,6 +24,23 @@ namespace mr_system
             get { return _domainObject.Navn; }
         }
 
+        public double TelefonNummer
+        {
+            get { return _domainObject.TelefonNummer; }
+        }
+
+        public string Mail
+        {
+            get { return _domainObject.EmailAddresse; }
+        }
+
+        public string Addresse
+        {
+            get { return _domainObject.Adresse; }
+        }
+
+        
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
