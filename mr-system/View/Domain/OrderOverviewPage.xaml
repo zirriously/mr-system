@@ -42,8 +42,8 @@
                                 <ColumnDefinition Width="25*"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" Text="Deadline" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Grid.Column="1" Text="Ordre" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Grid.Column="2" Text="Forventet levering" Style="{ThemeResource CaptionTextBlockStyle}"/>
                             <TextBlock Grid.Column="3" Text="Sagsbehandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
                         </Grid>
                     </Grid>
