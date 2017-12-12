@@ -8,11 +8,6 @@ namespace mr_system
         {
             private Customer _domainObject;
 
-            public CustomerViewModel()
-            {
-                _domainObject = new Customer();
-            }
-
             public double Cvr
             {
                 get { return _domainObject.Cvr; }

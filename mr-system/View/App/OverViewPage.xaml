@@ -38,9 +38,7 @@
                                 <AppBarButton Height="50" Label="Ny kunde" Icon="Add"/>
                             </CommandBar>
                         </Grid>
-                        <Grid Padding="12">
-                            
-                        </Grid>
+                        <!-- Content -->
                     </Grid>
                 </DataTemplate>
             </ListView.HeaderTemplate>
