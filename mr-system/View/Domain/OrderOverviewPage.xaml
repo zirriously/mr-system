@@ -30,17 +30,21 @@
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
                                 <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add"/>
+                                <AppBarButton Height="50" Label="Opret ny ordre" Icon="Edit"/>
+                                <AppBarButton Height="50" Label="Opret ny ordre" Icon="Delete"/>
                             </CommandBar>
                         </Grid>
                         <Grid Padding="12" Margin="0,60,0,0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="33.3*"/>
-                                <ColumnDefinition Width="33.3*"/>
-                                <ColumnDefinition Width="33.3*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="25*"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
                             <TextBlock Grid.Column="1" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
                             <TextBlock Grid.Column="2" Text="Deadline" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Grid.Column="3" Text="Sagsbehandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
                         </Grid>
                     </Grid>
                 </DataTemplate>
