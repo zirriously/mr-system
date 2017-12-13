@@ -34,7 +34,7 @@
                         FontSize="28"
                         Height="50">
                     <StackPanel>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72B;"/>
                     </StackPanel>
                 </Button>
 
