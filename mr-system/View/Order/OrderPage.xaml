@@ -140,12 +140,19 @@
                             <StackPanel>
                                 <StackPanel>
                                     <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
+                                    <SearchBox x:Name="ExistigCustSearch" 
+                                               FocusOnKeyboardInput="True"
+                                               QuerySubmitted="ExistingCustSearch_QuerySubmitted"
+                                               Width="250"
+                                               Height="35"
+                                               PlaceholderText="Søg kunde"
+                                               HorizontalAlignment="right"/>
                                     <ScrollViewer x:Name="NewCustScrollViewer">
                                         <Grid Height="150" Margin="20">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="100*"/>
                                             </Grid.ColumnDefinitions>
-                                            <ListView  ItemsSource="{Binding ItemViewModelCollection}">
+                                            <ListView Name="CustListView" ItemsSource="{Binding ItemViewModelCollection}">
                                                 <ListView.ItemTemplate>
                                                     <DataTemplate>
                                                         <Grid>

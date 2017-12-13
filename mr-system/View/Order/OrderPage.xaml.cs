@@ -31,5 +31,10 @@ namespace mr_system.View.Order
         {
             this.Frame.Navigate(typeof(OrderOverviewPage));
         }
+
+        private void ExistingCustSearch_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
+        {
+            
+        }
     }
 }
