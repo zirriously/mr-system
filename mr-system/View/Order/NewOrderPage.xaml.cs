@@ -26,5 +26,10 @@ namespace mr_system.View.Order
         {
             this.InitializeComponent();
         }
+
+        private void Button_ClickGoBack(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
