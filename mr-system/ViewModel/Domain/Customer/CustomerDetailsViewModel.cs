@@ -27,25 +27,17 @@ namespace mr_system
             }
         }
 
-        public string Navn
+        public string FirstName
         {
-            get { return _domainObject.Navn; }
+            get { return _domainObject.FirstName; }
             set
             {
-                _domainObject.Navn = value;
+                _domainObject.FirstName = value;
                 OnPropertyChanged();
             }
         }
 
-        //public string Att
-        //{
-        //    get { return _domainObject.Att; }
-        //    set
-        //    {
-        //        _domainObject.Att = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
+        
 
         public string Adr
         {
@@ -96,15 +88,7 @@ namespace mr_system
             }
         }
 
-        public string ForLev
-        {
-            get { return _domainObject.ForventetLevering; }
-            set
-            {
-                _domainObject.ForventetLevering = value;
-                OnPropertyChanged();
-            }
-        }
+      
 
 
         public event PropertyChangedEventHandler PropertyChanged;

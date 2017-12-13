@@ -21,7 +21,7 @@ namespace mr_system
 
         public string FirstName
         {
-            get { return _domainObject.ForNavn; }
+            get { return _domainObject.FirstName; }
         }
 
         public string LastName

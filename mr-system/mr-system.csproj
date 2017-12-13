@@ -103,7 +103,6 @@
     <Compile Include="Model\Domain\Customer\Customer.cs" />
     <Compile Include="Model\Domain\Order\Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\Domain\Customer\CustomerViewModel.cs" />
     <Compile Include="ViewModel\Domain\Order\OrderDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Order\OrderItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Order\OrderMasterDetailsViewModel.cs" />
