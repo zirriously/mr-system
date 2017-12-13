@@ -28,10 +28,7 @@ namespace mr_system
             get { return _domainObject.OrderInfo; }
         }
 
-        public string CaseOwner
-        {
-            get { return _domainObject.CaseOwner; }
-        }
+       
 
         public string ExpectedDelivery
         {
