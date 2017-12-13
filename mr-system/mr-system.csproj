@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
+    <Compile Include="Model\Domain\Order\CaseOwner.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />

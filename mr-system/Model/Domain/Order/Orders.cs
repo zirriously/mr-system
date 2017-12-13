@@ -19,7 +19,7 @@ namespace mr_system.Model
         }
 
         public string ExpectedDelivery { get; set; }
-        public string CaseOwner { get; set; }
+       
 
         public string OrderName { get; set; }
 
