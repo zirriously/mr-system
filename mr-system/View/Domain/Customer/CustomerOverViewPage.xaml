@@ -41,8 +41,9 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Height="50" Label="Gem" Icon="Save"/>
-                    <AppBarButton Height="50" Label="Slet Ordre" Icon="Delete"/>
+                    <AppBarButton Height="50" Label="Opret ny kunde" Icon="Add"/>
+                    <AppBarButton Height="50" Label="Rediger kunde" Icon="Edit"/>
+                    <AppBarButton Height="50" Label="Slet kunde" Icon="Delete"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1">
