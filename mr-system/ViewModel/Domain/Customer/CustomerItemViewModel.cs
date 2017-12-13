@@ -31,17 +31,17 @@ namespace mr_system
 
         public double TelefonNummer
         {
-            get { return _domainObject.TelefonNummer; }
+            get { return _domainObject.Phone; }
         }
 
         public string Mail
         {
-            get { return _domainObject.EmailAddresse; }
+            get { return _domainObject.Email; }
         }
 
         public string Addresse
         {
-            get { return _domainObject.Adresse; }
+            get { return _domainObject.Adress; }
         }
 
         

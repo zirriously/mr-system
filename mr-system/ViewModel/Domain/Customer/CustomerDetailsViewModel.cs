@@ -41,40 +41,40 @@ namespace mr_system
 
         public string Adr
         {
-            get { return _domainObject.Adresse; }
+            get { return _domainObject.Adress; }
             set
             {
-                _domainObject.Adresse = value;
+                _domainObject.Adress = value;
                 OnPropertyChanged();
             }
         }
 
         public double postnr
         {
-            get { return _domainObject.PostNummer; }
+            get { return _domainObject.AreaCode; }
             set
             {
-                _domainObject.PostNummer = value;
+                _domainObject.AreaCode = value;
                 OnPropertyChanged();
             }
         }
 
         public double Tlf
         {
-            get { return _domainObject.TelefonNummer; }
+            get { return _domainObject.Phone; }
             set
             {
-                _domainObject.TelefonNummer = value;
+                _domainObject.Phone = value;
                 OnPropertyChanged();
             }
         }
 
         public string Email
         {
-            get { return _domainObject.EmailAddresse; }
+            get { return _domainObject.Email; }
             set
             {
-                _domainObject.EmailAddresse = value;
+                _domainObject.Email = value;
                 OnPropertyChanged();
             }
         }
