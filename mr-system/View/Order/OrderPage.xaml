@@ -47,7 +47,9 @@
                     <AppBarButton Height="50" Label="Gem" Icon="Save"/>
                 </CommandBar>
             </Grid>
+            
             <Grid Grid.Row="1" Margin="20">
+                <ScrollViewer x:Name="ScrollViewer">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
@@ -136,87 +138,86 @@
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="0" Grid.Column="1">
-                        <ScrollViewer x:Name="ScrollViewer">
+                        <StackPanel>
                             <StackPanel>
-                                <StackPanel>
-                                    <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
-                                    <SearchBox x:Name="ExistigCustSearch" 
+                                <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
+                                <SearchBox x:Name="ExistigCustSearch" 
                                                FocusOnKeyboardInput="True"
                                                QuerySubmitted="ExistingCustSearch_QuerySubmitted"
                                                Width="250"
                                                Height="35"
                                                PlaceholderText="Søg kunde"
                                                HorizontalAlignment="right"/>
-                                    <ScrollViewer x:Name="NewCustScrollViewer">
-                                        <Grid Height="150" Margin="20">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="100*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <ListView Name="CustListView" ItemsSource="{Binding ItemViewModelCollection}">
-                                                <ListView.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="100*"/>
-                                                                <ColumnDefinition Width="100*"/>
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding FirstName}" />
-                                                            <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding LastName}" />
-                                                        </Grid>
-                                                    </DataTemplate>
-                                                </ListView.ItemTemplate>
-                                                <ListView.ItemContainerStyle>
-                                                    <Style TargetType="ListViewItem">
-                                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                                                    </Style>
-                                                </ListView.ItemContainerStyle>
-                                            </ListView>
-                                        </Grid>
-                                    </ScrollViewer>
-                                </StackPanel>
-                                <StackPanel>
-                                    <TextBlock Text="Kunde information" FontSize="25"/>
-                                    <Grid>
+                                <ScrollViewer x:Name="NewCustScrollViewer">
+                                    <Grid Height="150" Margin="20">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*" />
-                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="100*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="1*" />
-                                        </Grid.RowDefinitions>
-                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
-                                 PlaceholderText="Indtast CVR" />
-                                        <DatePicker Margin="20" Header="Callback" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker"/>
-                                        <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
-                                 PlaceholderText="Indtast fornavn" />
-                                        <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
-                                 PlaceholderText="Indtast efternavn" />
-                                        <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" x:Name="Phone" Margin="20" 
-                                 PlaceholderText="Indtast telefon nr" />
-                                        <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" x:Name="Mail" Margin="20" 
-                                 PlaceholderText="Indtast email" />
-                                        <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" x:Name="Street" Margin="20" 
-                                 PlaceholderText="Indtast gadenavn" />
-                                        <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
-                                 PlaceholderText="Indtast By" />
-                                        <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
-                                 PlaceholderText="Indtast post nr" />
+                                        <ListView Name="CustListView" ItemsSource="{Binding ItemViewModelCollection}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="100*"/>
+                                                            <ColumnDefinition Width="100*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding FirstName}" />
+                                                        <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding LastName}" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                            <ListView.ItemContainerStyle>
+                                                <Style TargetType="ListViewItem">
+                                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                                </Style>
+                                            </ListView.ItemContainerStyle>
+                                        </ListView>
                                     </Grid>
-                                    <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
+                                </ScrollViewer>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="Kunde information" FontSize="25"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                    </Grid.RowDefinitions>
+                                    <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
+                                 PlaceholderText="Indtast CVR" />
+                                    <DatePicker Margin="20" Header="Callback" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker"/>
+                                    <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
+                                 PlaceholderText="Indtast fornavn" />
+                                    <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
+                                 PlaceholderText="Indtast efternavn" />
+                                    <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" x:Name="Phone" Margin="20" 
+                                 PlaceholderText="Indtast telefon nr" />
+                                    <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" x:Name="Mail" Margin="20" 
+                                 PlaceholderText="Indtast email" />
+                                    <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" x:Name="Street" Margin="20" 
+                                 PlaceholderText="Indtast gadenavn" />
+                                    <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
+                                 PlaceholderText="Indtast By" />
+                                    <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
+                                 PlaceholderText="Indtast post nr" />
+                                </Grid>
+                                <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
                                  PlaceholderText="Indtast information"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
-                                </StackPanel>
                             </StackPanel>
-                        </ScrollViewer>
+                        </StackPanel>
                     </Grid>
                 </Grid>
+                </ScrollViewer>
             </Grid>
         </Grid>
     </Grid>
