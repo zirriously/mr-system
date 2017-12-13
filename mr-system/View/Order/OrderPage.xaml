@@ -185,6 +185,7 @@
                                         </Grid.RowDefinitions>
                                         <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
                                  PlaceholderText="Indtast CVR" />
+                                        <DatePicker Margin="20" Header="Callback" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker" CalendarIdentifier="CallBack"/>
                                         <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
                                  PlaceholderText="Indtast fornavn" />
                                         <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
