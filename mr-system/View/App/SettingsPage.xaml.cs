@@ -26,5 +26,9 @@ namespace mr_system.View
         {
             this.InitializeComponent();
         }
+
+        private void DarkThemeRadioButton_OnClick(object sender, RoutedEventArgs e) => RequestedTheme = ElementTheme.Dark;
+
+        private void LightThemeRadioButton_OnClick(object sender, RoutedEventArgs e) => RequestedTheme = ElementTheme.Light;
     }
 }
