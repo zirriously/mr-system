@@ -100,11 +100,11 @@
                                                     <DataTemplate>
                                                         <Grid>
                                                             <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="1*"/>
-                                                                <ColumnDefinition Width="1*"/>
+                                                                <ColumnDefinition Width="100*"/>
+                                                                <ColumnDefinition Width="100*"/>
                                                             </Grid.ColumnDefinitions>
                                                             <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding FirstName}" />
-                                                            <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding LastName}" />
+                                                            <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding LastName}" />
                                                         </Grid>
                                                     </DataTemplate>
                                                 </ListView.ItemTemplate>
