@@ -23,7 +23,7 @@
             
             <NavigationView.PaneFooter>
                 <Button x:Name="ThemeToggleButton" Click="ThemeToggleButton_OnClick">
-                    <SymbolIcon Symbol="Tag"></SymbolIcon>
+                    <SymbolIcon Symbol="SolidStar"></SymbolIcon>
                 </Button>
             </NavigationView.PaneFooter>
 
@@ -31,7 +31,7 @@
                 <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
 
-            <Frame x:Name="ContentFrame" Margin="20,-40,20,20">
+            <Frame x:Name="ContentFrame" Margin="0,-50,0,0">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition/>
