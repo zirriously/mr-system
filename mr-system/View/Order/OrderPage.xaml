@@ -47,109 +47,109 @@
                     <AppBarButton Height="50" Label="Gem" Icon="Save"/>
                 </CommandBar>
             </Grid>
-            
+
             <Grid Grid.Row="1" Margin="20">
-                <ScrollViewer x:Name="ScrollViewer">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
+                <ScrollViewer Height="auto" VerticalScrollBarVisibility="Auto" x:Name="MainScrollViewer">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0" Grid.Column="0">
-                        <StackPanel>
+                        <Grid Grid.Row="0" Grid.Column="0">
                             <StackPanel>
-                                <TextBlock Text="Opret ny ordre" FontSize="25"/>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="100*" />
+                                <StackPanel>
+                                    <TextBlock Text="Opret ny ordre" FontSize="25"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100*" />
 
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                    </Grid.RowDefinitions>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                        </Grid.RowDefinitions>
 
-                                    <ComboBox PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Grid.Column="0"  Grid.Row="0" Header="Sagsbehandler" Width="auto"  Margin="20"
+                                        <ComboBox PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Grid.Column="0"  Grid.Row="0" Header="Sagsbehandler" Width="auto"  Margin="20"
                                                DisplayMemberPath="Source"/>
 
-                                    <TextBox Grid.Column="0"  Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
+                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
                                      PlaceholderText="Indtast ordre informationer"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
-                                </Grid>
-                            </StackPanel>
-                            <StackPanel>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*" />
-                                        <ColumnDefinition Width="1*" />
-                                        <ColumnDefinition Width="1*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                    </Grid.RowDefinitions>
+                                    </Grid>
+                                </StackPanel>
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                        </Grid.RowDefinitions>
 
-                                    <TextBox Grid.Column="0"  Grid.Row="0" Header="Mål" x:Name="Mål" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="0" Header="Mål" x:Name="Mål" Margin="20" 
                                              PlaceholderText="Indtast Mål" />
 
-                                    <TextBox Grid.Column="1"  Grid.Row="0" Header="Antal" x:Name="Antal" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="0" Header="Antal" x:Name="Antal" Margin="20" 
                                              PlaceholderText="Indtast Antal" />
 
-                                    <TextBox Grid.Column="2"  Grid.Row="0" Header="Mål" x:Name="Mål2" Margin="20" 
+                                        <TextBox Grid.Column="2"  Grid.Row="0" Header="Mål" x:Name="Mål2" Margin="20" 
                                              PlaceholderText="Indtast Mål" />
 
-                                    <TextBox Grid.Column="0"  Grid.Row="1" Header="Medie" x:Name="Medie" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="Medie" x:Name="Medie" Margin="20" 
                                              PlaceholderText="Indtast Medie" />
 
-                                    <TextBox Grid.Column="1"  Grid.Row="1" Header="Laminat" x:Name="Laminat" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="1" Header="Laminat" x:Name="Laminat" Margin="20" 
                                              PlaceholderText="Indtast Laminat" />
 
-                                    <TextBox Grid.Column="2"  Grid.Row="1" Header="Pris" x:Name="Price" Margin="20" 
+                                        <TextBox Grid.Column="2"  Grid.Row="1" Header="Pris" x:Name="Price" Margin="20" 
                                              PlaceholderText="Indtast Pris" />
 
-                                    <TextBox Grid.Column="0"  Grid.Row="2" Header="Medie" x:Name="Medie2" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="2" Header="Medie" x:Name="Medie2" Margin="20" 
                                              PlaceholderText="Indtast Medie" />
 
-                                    <TextBox Grid.Column="1"  Grid.Row="2" Header="Laminat" x:Name="Laminat2" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="2" Header="Laminat" x:Name="Laminat2" Margin="20" 
                                              PlaceholderText="Indtast Laminat" />
 
-                                    <TextBox Grid.Column="2"  Grid.Row="2" Header="Dtp Pris" x:Name="DtpPrice" Margin="20" 
+                                        <TextBox Grid.Column="2"  Grid.Row="2" Header="Dtp Pris" x:Name="DtpPrice" Margin="20" 
                                              PlaceholderText="Indtast Dtp Pris" />
-                                </Grid>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*" />
-                                    </Grid.ColumnDefinitions>
+                                    </Grid>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
 
-                                    <TextBox Header="Special ordre" x:Name="CustomOrder" Margin="20" Height="200"
+                                        <TextBox Header="Special ordre" x:Name="CustomOrder" Margin="20" Height="200"
                                  PlaceholderText="Indtast special ordre informationer"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
-                                </Grid>
+                                    </Grid>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                    <Grid Grid.Row="0" Grid.Column="1">
-                        <StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="1">
                             <StackPanel>
-                                <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
-                                <SearchBox x:Name="ExistigCustSearch" 
+                                <StackPanel>
+                                    <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
+                                    <SearchBox x:Name="ExistigCustSearch" 
                                                FocusOnKeyboardInput="True"
                                                QuerySubmitted="ExistingCustSearch_QuerySubmitted"
                                                Width="250"
                                                Height="35"
+                                               Margin="20"
                                                PlaceholderText="Søg kunde"
                                                HorizontalAlignment="right"/>
-                                <ScrollViewer x:Name="NewCustScrollViewer">
-                                    <Grid Height="150" Margin="20">
+                                    <Grid Height="130" Margin="20">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="100*"/>
                                         </Grid.ColumnDefinitions>
@@ -173,50 +173,49 @@
                                             </ListView.ItemContainerStyle>
                                         </ListView>
                                     </Grid>
-                                </ScrollViewer>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBlock Text="Kunde information" FontSize="25"/>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*" />
-                                        <ColumnDefinition Width="1*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                        <RowDefinition Height="1*" />
-                                    </Grid.RowDefinitions>
-                                    <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Kunde information" FontSize="25"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="1*" />
+                                        </Grid.RowDefinitions>
+                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
                                  PlaceholderText="Indtast CVR" />
-                                    <DatePicker Margin="20" Header="Callback" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker"/>
-                                    <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
+                                        <DatePicker Margin="20" Header="Callback" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker" Width="auto"/>
+                                        <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
                                  PlaceholderText="Indtast fornavn" />
-                                    <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
                                  PlaceholderText="Indtast efternavn" />
-                                    <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" x:Name="Phone" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" x:Name="Phone" Margin="20" 
                                  PlaceholderText="Indtast telefon nr" />
-                                    <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" x:Name="Mail" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" x:Name="Mail" Margin="20" 
                                  PlaceholderText="Indtast email" />
-                                    <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" x:Name="Street" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" x:Name="Street" Margin="20" 
                                  PlaceholderText="Indtast gadenavn" />
-                                    <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
                                  PlaceholderText="Indtast By" />
-                                    <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
                                  PlaceholderText="Indtast post nr" />
-                                </Grid>
-                                <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
+                                    </Grid>
+                                    <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
                                  PlaceholderText="Indtast information"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
+                        </Grid>
                     </Grid>
-                </Grid>
                 </ScrollViewer>
             </Grid>
         </Grid>
