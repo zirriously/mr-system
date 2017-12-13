@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
+    <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
@@ -103,6 +104,9 @@
     <Compile Include="Model\Domain\Order\Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\Domain\Order\OrderDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Domain\Order\OrderItemViewModel.cs" />
+    <Compile Include="ViewModel\Domain\Order\OrderMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Order\OrderOverviewLogic.cs" />
     <Compile Include="View\App\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
