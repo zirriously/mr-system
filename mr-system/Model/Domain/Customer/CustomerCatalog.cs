@@ -16,9 +16,7 @@ namespace mr_system.Model
         {
             _customers = new Dictionary<int, Customer>();
 
-            Create(new Customer("Albert", "hej", 14, "vej 2"));
-            Create(new Customer("Per", "ff", 4, "ff 4"));
-            Create(new Customer("Tristan", "smart@gmail.com", 2222, "ff 5"));
+            Create(new Customer("Albert", "Sørensen", "Søndergade", 14, "vej 2"));
         }
 
 

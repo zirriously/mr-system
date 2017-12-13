@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mrSystem="using:mr_system"
     mc:Ignorable="d">
-
+    
     <Page.DataContext>
         <mrSystem:CustomerMasterDetailsViewModel/>
     </Page.DataContext>
@@ -75,9 +75,9 @@
                                     </Grid.RowDefinitions>
 
                                     <ComboBox x:Name="CaseOwner" Grid.Column="0"  Grid.Row="0" Header="Sagsbehandler" Width="auto"  Margin="20"
-                                              ItemsSource="{x:Bind}" DisplayMemberPath="Source"/>
-                                    
-                                    <TextBox Grid.Column="1"  Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
+                                               DisplayMemberPath="Source"/>
+
+                                    <TextBox Grid.Column="0"  Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
                                      PlaceholderText="Indtast ordre informationer"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
@@ -91,7 +91,7 @@
                                 <StackPanel>
                                     <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
                                     <ScrollViewer x:Name="NewCustScrollViewer">
-                                        <Grid Height="100">
+                                        <Grid Height="150" Margin="20">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="100*"/>
                                             </Grid.ColumnDefinitions>
@@ -100,8 +100,6 @@
                                                     <DataTemplate>
                                                         <Grid>
                                                             <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="1*"/>
-                                                                <ColumnDefinition Width="1*"/>
                                                                 <ColumnDefinition Width="1*"/>
                                                                 <ColumnDefinition Width="1*"/>
                                                             </Grid.ColumnDefinitions>
