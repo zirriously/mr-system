@@ -22,29 +22,84 @@ namespace mr_system
         public string FirstName
         {
             get { return _domainObject.FirstName; }
+            set
+            {
+                _domainObject.FirstName = value;
+                OnPropertyChanged();
+            }
         }
 
         public string LastName
         {
             get { return _domainObject.LastName; }
+            set
+            {
+                _domainObject.LastName = value;
+                OnPropertyChanged();
+            }
         }
 
-        public double TelefonNummer
+        public double PhoneNumber
         {
             get { return _domainObject.Phone; }
+            set
+            {
+                _domainObject.Phone = value;
+                OnPropertyChanged();
+            }
         }
 
-        public string Mail
+        public string Email
         {
             get { return _domainObject.Email; }
+            set
+            {
+                _domainObject.Email = value;
+                OnPropertyChanged();
+            }
         }
 
-        public string Addresse
+        public string Address
         {
             get { return _domainObject.Adress; }
+            set
+            {
+                _domainObject.Adress = value;
+                OnPropertyChanged();
+            }
         }
 
-        
+        public double AreaCode
+        {
+            get { return _domainObject.AreaCode; }
+            set
+            {
+                _domainObject.AreaCode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string EmailAddress
+        {
+            get { return _domainObject.Email; }
+            set
+            {
+                _domainObject.Email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Info
+        {
+            get { return _domainObject.Information; }
+            set
+            {
+                _domainObject.Information = value;
+                OnPropertyChanged();
+            }
+        }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
