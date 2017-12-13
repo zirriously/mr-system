@@ -91,14 +91,14 @@ namespace mr_system
             }
         }
 
-        private void LightThemeRadioButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            RequestedTheme = ElementTheme.Light;
-        }
 
-        private void DarkThemeRadioButton_OnClick(object sender, RoutedEventArgs e)
+        private void ThemeToggleButton_OnClick(object sender, RoutedEventArgs e)
         {
-            RequestedTheme = ElementTheme.Dark;
+
+            if (ActualTheme == ElementTheme.Dark)
+                RequestedTheme = ElementTheme.Light;
+            else
+                RequestedTheme = ElementTheme.Dark;
         }
     }
 }
