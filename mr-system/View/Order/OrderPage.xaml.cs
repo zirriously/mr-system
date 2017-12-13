@@ -20,9 +20,9 @@ namespace mr_system.View.Order
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewOrderPage : Page
+    public sealed partial class OrderPage : Page
     {
-        public NewOrderPage()
+        public OrderPage()
         {
             this.InitializeComponent();
         }

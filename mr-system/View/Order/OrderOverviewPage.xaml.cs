@@ -29,7 +29,7 @@ namespace mr_system
 
         private void NewOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(NewOrderPage));
+            this.Frame.Navigate(typeof(OrderPage));
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
