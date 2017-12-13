@@ -5,32 +5,82 @@
     xmlns:local="using:mr_system.View.Order"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mrSystem="using:mr_system"
     mc:Ignorable="d">
-    
-    <ScrollViewer x:Name="myScrollViewer">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-        </Grid.RowDefinitions>
+    <Page.DataContext>
+        <mrSystem:CustomerMasterDetailsViewModel/>
+    </Page.DataContext>
 
-        <Grid Grid.Row="0" Grid.Column="0">
+    <ScrollViewer x:Name="ScrollViewer">
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="Opret ny ordre" FontSize="25"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                            </Grid.RowDefinitions>
+                            <TextBox Grid.Column="0"  Grid.Row="0" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
+                                     PlaceholderText="Indtast forspørgsel"
+                                     TextWrapping="Wrap"
+                                     AcceptsReturn="True"/>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
 
             <Grid Grid.Row="0" Grid.Column="1">
                 <StackPanel>
                     <StackPanel>
-                        <TextBlock Text="Vælg eksisterende kunde" Margin="20" />
-                        <ListBox></ListBox>
+                        <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
+                        <ScrollViewer x:Name="NewCustScrollViewer">
+                            <Grid Height="100">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80*"/>
+                                </Grid.ColumnDefinitions>
+                                <ListView  ItemsSource="{Binding ItemViewModelCollection}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="1*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding FirstName}" />
+                                                <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding LastName}" />
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                        </Style>
+                                    </ListView.ItemContainerStyle>
+                                </ListView>
+                            </Grid>
+                        </ScrollViewer>
                     </StackPanel>
                     <StackPanel>
+                        <TextBlock Text="Indtast kunde information" FontSize="25"/>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1*" />
@@ -61,12 +111,14 @@
                                  PlaceholderText="Indtast By" />
                             <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
                                  PlaceholderText="Indtast post nr" />
-                            <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20"
-                                 PlaceholderText="Indtast information" />
                         </Grid>
+                        <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
+                                 PlaceholderText="Indtast information"
+                                 TextWrapping="Wrap"
+                                 AcceptsReturn="True"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
-        </Grid> 
+        </Grid>
     </ScrollViewer>
 </Page>

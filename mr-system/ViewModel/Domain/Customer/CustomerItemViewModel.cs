@@ -19,9 +19,14 @@ namespace mr_system
             get { return _domainObject; }
         }
 
-        public string Description
+        public string FirstName
         {
-            get { return _domainObject.Navn; }
+            get { return _domainObject.ForNavn; }
+        }
+
+        public string LastName
+        {
+            get { return _domainObject.LastName; }
         }
 
         public double TelefonNummer

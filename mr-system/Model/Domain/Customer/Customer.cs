@@ -8,7 +8,7 @@ public class Customer : INotifyPropertyChanged
     public Customer(string navn, string email, double tlf, string adresse)
     {
         Key = -1;
-        Navn = navn;
+        ForNavn = navn;
         EmailAddresse = email;
         TelefonNummer = tlf;
         Adresse = adresse;
@@ -18,9 +18,9 @@ public class Customer : INotifyPropertyChanged
     public int Key { get; set; }
     public double Cvr { get; set; }
 
-    public string Navn { get; set; }
+    public string ForNavn { get; set; }
 
-    public string Att { get; set; }
+    public string LastName { get; set; }
 
     public string Adresse { get; set; }
 

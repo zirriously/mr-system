@@ -37,15 +37,15 @@ namespace mr_system
             }
         }
 
-        public string Att
-        {
-            get { return _domainObject.Att; }
-            set
-            {
-                _domainObject.Att = value;
-                OnPropertyChanged();
-            }
-        }
+        //public string Att
+        //{
+        //    get { return _domainObject.Att; }
+        //    set
+        //    {
+        //        _domainObject.Att = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         public string Adr
         {
