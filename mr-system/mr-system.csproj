@@ -107,7 +107,6 @@
     <Compile Include="ViewModel\Domain\Order\OrderDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Order\OrderItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Order\OrderMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\Domain\Order\OrderOverviewLogic.cs" />
     <Compile Include="View\App\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

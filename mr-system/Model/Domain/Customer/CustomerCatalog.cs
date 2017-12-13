@@ -15,8 +15,13 @@ namespace mr_system.Model
         public CustomerCatalog()
         {
             _customers = new Dictionary<int, Customer>();
-
             Create(new Customer(36452658, "Albert", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
+            Create(new Customer(36452658, "Frank", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
+            Create(new Customer(36452658, "Mikkel", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
+            Create(new Customer(36452658, "Per", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
+            Create(new Customer(36452658, "Bob", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
+            Create(new Customer(36452658, "Troels", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
+            Create(new Customer(36452658, "Peter", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
         }
 
 
