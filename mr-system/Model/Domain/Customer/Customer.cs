@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 
 public class Customer : INotifyPropertyChanged
 {
-    public Customer(int cvr, string firstName, string lastname, string email, double phone, string adress, int areaCode)
+    public Customer(Int64 cvr, string firstName, string lastname, string email, Int64 phone, string adress, double areaCode)
     {
         Key = -1;
         Cvr = cvr;
@@ -20,7 +20,7 @@ public class Customer : INotifyPropertyChanged
 
     public int Key { get; set; }
 
-    public double Cvr { get; set; }
+    public Int64 Cvr { get; set; }
 
     public string FirstName { get; set; }
 
@@ -28,7 +28,7 @@ public class Customer : INotifyPropertyChanged
 
     public string Email { get; set; }
 
-    public double Phone { get; set; }
+    public Int64 Phone { get; set; }
 
     public string Adress { get; set; }
 

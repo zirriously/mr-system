@@ -9,12 +9,12 @@ namespace mr_system.Model
 
 
         private static int _keyCount = 1;
-        private Dictionary<int, Customer> _customers;
+        private Dictionary<double, Customer> _customers;
 
 
         public CustomerCatalog()
         {
-            _customers = new Dictionary<int, Customer>();
+            _customers = new Dictionary<double, Customer>();
             Create(new Customer(36452658, "Albert", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
             Create(new Customer(36452658, "Frank", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));
             Create(new Customer(36452658, "Mikkel", "Sørensen", "Mail@mail.dk", 66254292, "Søndergade 20", 4180));

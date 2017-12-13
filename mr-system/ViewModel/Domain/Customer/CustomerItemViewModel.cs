@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using mr_system.Model;
@@ -39,22 +40,12 @@ namespace mr_system
             }
         }
 
-        public double PhoneNumber
+        public Int64 PhoneNumber
         {
             get { return _domainObject.Phone; }
             set
             {
                 _domainObject.Phone = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Email
-        {
-            get { return _domainObject.Email; }
-            set
-            {
-                _domainObject.Email = value;
                 OnPropertyChanged();
             }
         }
@@ -95,6 +86,16 @@ namespace mr_system
             set
             {
                 _domainObject.Information = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Int64 CVR
+        {
+            get { return _domainObject.Cvr; }
+            set
+            {
+                _domainObject.Cvr = value;
                 OnPropertyChanged();
             }
         }
