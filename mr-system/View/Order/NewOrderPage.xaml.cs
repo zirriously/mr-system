@@ -29,7 +29,7 @@ namespace mr_system.View.Order
 
         private void Button_ClickGoBack(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.GoBack();
         }
     }
 }
