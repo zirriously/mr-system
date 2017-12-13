@@ -12,10 +12,10 @@ public class Customer : INotifyPropertyChanged
         EmailAddresse = email;
         TelefonNummer = tlf;
         Adresse = adresse;
-
     }
 
     public int Key { get; set; }
+
     public double Cvr { get; set; }
 
     public string ForNavn { get; set; }
@@ -33,6 +33,8 @@ public class Customer : INotifyPropertyChanged
     public string Information { get; set; }
 
     public string ForventetLevering { get; set; }
+
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
