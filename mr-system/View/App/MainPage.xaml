@@ -22,11 +22,9 @@
             </NavigationView.MenuItems>
             
             <NavigationView.PaneFooter>
-                <StackPanel>
-                    <TextBlock Text="Tema" FontSize="10"/>
-                    <RadioButton FontSize="10" Content="Lys" x:Name="LightThemeRadioButton" Click="LightThemeRadioButton_OnClick"/>
-                    <RadioButton FontSize="10" Content="Mørk" x:Name="DarkThemeRadioButton" Click="DarkThemeRadioButton_OnClick"/>
-                </StackPanel>
+                <Button x:Name="ThemeToggleButton" Click="ThemeToggleButton_OnClick">
+                    <SymbolIcon Symbol="Tag"></SymbolIcon>
+                </Button>
             </NavigationView.PaneFooter>
 
             <NavigationView.AutoSuggestBox>
