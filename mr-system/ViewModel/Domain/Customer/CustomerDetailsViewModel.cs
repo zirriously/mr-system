@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace mr_system
@@ -17,7 +18,7 @@ namespace mr_system
             get {return _domainObject;}
         }
 
-        public double Cvr
+        public Int64 Cvr
         {
             get { return _domainObject.Cvr; }
             set
@@ -59,7 +60,7 @@ namespace mr_system
             }
         }
 
-        public double Tlf
+        public Int64 Tlf
         {
             get { return _domainObject.Phone; }
             set
