@@ -23,7 +23,7 @@
             
             <NavigationView.PaneFooter>
                 <Button x:Name="ThemeToggleButton" Click="ThemeToggleButton_OnClick">
-                    <SymbolIcon Symbol="SolidStar"></SymbolIcon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE790;"/>
                 </Button>
             </NavigationView.PaneFooter>
 
