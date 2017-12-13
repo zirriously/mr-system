@@ -72,8 +72,8 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="1*" />
                                     </Grid.RowDefinitions>
-                                    <TextBox Grid.Column="0"  Grid.Row="0" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
-                                     PlaceholderText="Indtast forspørgsel"
+                                    <TextBox Grid.Column="0"  Grid.Row="0" Header="Forespørgsel" x:Name="request" Margin="20" Height="200"
+                                     PlaceholderText="Indtast forespørgsel"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
                                 </Grid>
