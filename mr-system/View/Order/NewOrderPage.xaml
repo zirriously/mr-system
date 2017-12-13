@@ -29,14 +29,15 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-
-                <Button Grid.Column="0" Content="Gå tilbage"
-                                 Click="HyperlinkButton_Click"
-                                 HorizontalAlignment="left" 
-                                 Height="50"
-                                 FontSize="28"
-                                 VerticalAlignment="Center"/>
-
+                <Button Grid.Column="0" Click="Button_ClickGoBack" 
+                        HorizontalAlignment="left" 
+                        FontSize="28"
+                        Height="50">
+                    <StackPanel>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
+                    </StackPanel>
+                </Button>
+   
                 <CommandBar Grid.Column="1"
                                         Height="50"
                                         HorizontalAlignment="Right"

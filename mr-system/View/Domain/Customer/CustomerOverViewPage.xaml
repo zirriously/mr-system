@@ -35,12 +35,6 @@
                            VerticalAlignment="Center"
                            Text="Kunder"/>
 
-                <TextBlock Grid.Column="0" Style="{StaticResource TitleTextBlockStyle}"
-                                       Height="50"
-                                       FontSize="28"
-                                       VerticalAlignment="Center"
-                                       Text="Back button"/>
-
                 <CommandBar Grid.Column="1"
                                         Height="50"
                                         HorizontalAlignment="Right"
