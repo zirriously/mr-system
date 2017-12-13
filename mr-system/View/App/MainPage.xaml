@@ -12,15 +12,22 @@
                     ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
                     Loaded="NavView_Loaded"
-                    OpenPaneLength="200">
+                    OpenPaneLength="200"
+                    IsSettingsVisible="False">
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Home" Content="Overblik" Tag="overView" Margin="0,20,0,0">
-                </NavigationViewItem>
-                <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView">
-                </NavigationViewItem>
+                <NavigationViewItem Icon="Home" Content="Overblik" Tag="overView" Margin="0,20,0,0"/>
+                <NavigationViewItem Icon="PreviewLink" Content="Ordrer" Tag="orderOverView"/>
                 <NavigationViewItem Icon="People" Content="Kunder" Tag="customerOverView"/>
             </NavigationView.MenuItems>
+            
+            <NavigationView.PaneFooter>
+                <StackPanel>
+                    <TextBlock Text="Tema" FontSize="10"/>
+                    <RadioButton FontSize="10" Content="Lys" x:Name="LightThemeRadioButton" Click="LightThemeRadioButton_OnClick"/>
+                    <RadioButton FontSize="10" Content="Mørk" x:Name="DarkThemeRadioButton" Click="DarkThemeRadioButton_OnClick"/>
+                </StackPanel>
+            </NavigationView.PaneFooter>
 
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
