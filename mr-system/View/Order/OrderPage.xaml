@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Page.DataContext>
-        <mrSystem:CustomerMasterDetailsViewModel/>
+        <mrSystem:OrderMasterDetailsViewModel/>
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -44,7 +44,8 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Height="50" Label="Gem" Icon="Save"/>
+                    <AppBarButton Visibility="Visible" Name="OrderSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="OrderAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">

@@ -44,8 +44,8 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Visibility="Collapsed" Name="CustSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
-                    <AppBarButton Visibility="Collapsed" Name="CustAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="CustSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="CustAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">
