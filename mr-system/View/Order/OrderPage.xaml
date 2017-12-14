@@ -47,9 +47,8 @@
                     <AppBarButton Height="50" Label="Gem" Icon="Save"/>
                 </CommandBar>
             </Grid>
-
             <Grid Grid.Row="1" Margin="20">
-                <ScrollViewer Height="auto" VerticalScrollBarVisibility="Auto" x:Name="MainScrollViewer">
+                <StackPanel>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*" />
@@ -68,17 +67,22 @@
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="100*" />
-
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="1*" />
                                             <RowDefinition Height="1*" />
                                         </Grid.RowDefinitions>
-
-                                        <ComboBox PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Grid.Column="0"  Grid.Row="0" Header="Sagsbehandler" Width="auto"  Margin="20"
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100*" />
+                                                <ColumnDefinition Width="100*" />
+                                            </Grid.ColumnDefinitions>
+                                            <ComboBox Grid.Column="0" Grid.Row="0" PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Header="Sagsbehandler" Width="auto"  Margin="20"
                                                DisplayMemberPath="Source"/>
 
-                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
+                                            <DatePicker Grid.Column="1" Grid.Row="0" Margin="20" Header="Forventet levering" x:Name="DeliveryDatePicker" Width="auto"/>
+                                        </Grid>
+                                        <TextBox Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
                                      PlaceholderText="Indtast ordre informationer"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
@@ -126,14 +130,26 @@
                                     </Grid>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="70*" />
+                                            <ColumnDefinition Width="30*" />
                                         </Grid.ColumnDefinitions>
 
-                                        <TextBox Header="Special ordre" x:Name="CustomOrder" Margin="20" Height="200"
-                                 PlaceholderText="Indtast special ordre informationer"
-                                 TextWrapping="Wrap"
-                                 AcceptsReturn="True"/>
-                                    </Grid>
+                                        <TextBox Grid.Column="0" Header="Special ordre" x:Name="CustomOrder" Margin="20" Height="200"
+                                         PlaceholderText="Indtast special ordre informationer"
+                                         TextWrapping="Wrap"
+                                         AcceptsReturn="True"/>
+                                        <Grid Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="1*" />
+                                                <RowDefinition Height="1*" />
+                                                <RowDefinition Height="1*" />
+                                            </Grid.RowDefinitions>
+                                            <TextBox Grid.Row="0" Header="Pris" Margin="0,30,20,30" x:Name="OverAllPrice" 
+                                                 PlaceholderText="kr" Height="60" Width="60" HorizontalAlignment="left"/>
+                                            <TextBlock Grid.Row="1"  Text="750 kr inkl. moms" Width="120" Margin="0,0,20,0" HorizontalAlignment="left"></TextBlock>
+                                            <TextBlock Grid.Row="2"  Text="1000 kr eks. moms" Width="120" Margin="0,-30,25,0" HorizontalAlignment="left"></TextBlock>
+                                            </Grid>
+                                        </Grid>
                                 </StackPanel>
                             </StackPanel>
                         </Grid>
@@ -142,14 +158,13 @@
                                 <StackPanel>
                                     <TextBlock Text="Vælg eksisterende kunde" FontSize="25"/>
                                     <SearchBox x:Name="ExistigCustSearch" 
-                                               FocusOnKeyboardInput="True"
                                                QuerySubmitted="ExistingCustSearch_QuerySubmitted"
                                                Width="250"
                                                Height="35"
                                                Margin="20"
                                                PlaceholderText="Søg kunde"
                                                HorizontalAlignment="right"/>
-                                    <Grid Height="130" Margin="20">
+                                    <Grid Height="45" Margin="20">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="100*"/>
                                         </Grid.ColumnDefinitions>
@@ -208,7 +223,7 @@
                                         <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
                                  PlaceholderText="Indtast post nr" />
                                     </Grid>
-                                    <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="200"
+                                    <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="150"
                                  PlaceholderText="Indtast information"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
@@ -216,7 +231,7 @@
                             </StackPanel>
                         </Grid>
                     </Grid>
-                </ScrollViewer>
+                </StackPanel>
             </Grid>
         </Grid>
     </Grid>
