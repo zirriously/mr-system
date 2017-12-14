@@ -12,13 +12,10 @@ namespace mr_system.Model
         {
             _caseOwner = name;
 
-            _caseOwnerList.Add(new CaseOwner("hej"));
-            _caseOwnerList.Add(new CaseOwner("heee"));
-            _caseOwnerList.Add(new CaseOwner("heeeeeeeeeeeeee"));
+            _caseOwnerList.Add(new CaseOwner("MR Staff"));
+            _caseOwnerList.Add(new CaseOwner("Jan Frølich Wulff"));
+            _caseOwnerList.Add(new CaseOwner("Thomas Levin"));
         }
-
         public List<CaseOwner> CaseOwners => _caseOwnerList;
-
-
     }
 }

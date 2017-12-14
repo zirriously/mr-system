@@ -103,7 +103,7 @@
     <Compile Include="FilePersistence\IStringPersistence.cs" />
     <Compile Include="FilePersistence\JSONConverter.cs" />
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
-    <Compile Include="Model\Domain\Order\CaseOwner.cs" />
+    <Compile Include="Model\Domain\CaseOwner\CaseOwner.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
@@ -164,6 +164,7 @@
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
     <Folder Include="ViewModel\App\" />
+    <Folder Include="ViewModel\Domain\CaseOwner\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\App\MainPage.xaml">

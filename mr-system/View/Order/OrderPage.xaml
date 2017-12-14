@@ -77,7 +77,7 @@
                                                 <ColumnDefinition Width="100*" />
                                                 <ColumnDefinition Width="100*" />
                                             </Grid.ColumnDefinitions>
-                                            <ComboBox Grid.Column="0" Grid.Row="0" PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Header="Sagsbehandler" Width="auto"  Margin="20"
+                                            <ComboBox ItemsSource="{Binding }" Grid.Column="0" Grid.Row="0" PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Header="Sagsbehandler" Width="auto"  Margin="20"
                                                DisplayMemberPath="Source"/>
 
                                             <DatePicker Grid.Column="1" Grid.Row="0" Margin="20" Header="Forventet levering" x:Name="DeliveryDatePicker" Width="auto"/>
