@@ -8,7 +8,7 @@ using mr_system.Model;
 
 namespace mr_system.Commands
 {
-    class DeleteCommand : ICommand
+    public class DeleteCommand : ICommand
     {
         private CustomerCatalog _catalog;
         private CustomerMasterDetailsViewModel _customerMasterDetailsView;
