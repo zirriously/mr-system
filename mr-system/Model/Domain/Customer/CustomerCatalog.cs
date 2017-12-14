@@ -14,6 +14,7 @@ namespace mr_system.Model
 
         public CustomerCatalog()
         {
+            _fileSource = new FileSource<Customer>(new FileStringPersistence(), new JSONConverter<Customer>());
             _customers = new Dictionary<int, Customer>();
             Create(new Customer("36452658", "Albert", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             Create(new Customer("36452658", "Frank", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));

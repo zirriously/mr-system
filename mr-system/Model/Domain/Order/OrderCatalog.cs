@@ -13,6 +13,7 @@ namespace mr_system.Model
       
         public OrderCatalog()
         {
+            _fileSource = new FileSource<Orders>(new FileStringPersistence(), new JSONConverter<Orders>());
             _orders = new Dictionary<int, Orders>();
 
           
