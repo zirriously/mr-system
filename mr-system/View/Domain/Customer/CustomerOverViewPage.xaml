@@ -19,8 +19,8 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
@@ -48,7 +48,9 @@
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1">
-                <ListView  ItemsSource="{Binding ItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
+                <ScrollViewer>
+                    <StackPanel>
+                        <ListView  ItemsSource="{Binding ItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
                     <ListView.HeaderTemplate>
                         <DataTemplate>
                             <Grid Padding="12">
@@ -67,6 +69,7 @@
                     </ListView.HeaderTemplate>
                     <ListView.ItemTemplate>
                         <DataTemplate>
+
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1*"/>
@@ -79,6 +82,7 @@
                                 <TextBlock Grid.Column="2" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding EmailAddress}"/>
                                 <TextBlock Grid.Column="3" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Address}"/>
                             </Grid>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                     <ListView.ItemContainerStyle>
@@ -87,6 +91,8 @@
                         </Style>
                     </ListView.ItemContainerStyle>
                 </ListView>
+                    </StackPanel>
+                </ScrollViewer>
             </Grid>
         </Grid>
     </Grid>
