@@ -33,5 +33,10 @@ namespace mr_system.View
         {
             this.Frame.Navigate(typeof(CustomerPage));
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

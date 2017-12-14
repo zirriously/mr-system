@@ -22,13 +22,6 @@ namespace mr_system.Model
             Create(new Customer("36452658", "Bob", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             Create(new Customer("36452658", "Troels", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             Create(new Customer("36452658", "Peter", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
-            Create(new Customer());
-            Create(new Customer("Phone", lastName: "LastName", email: "mail@mail.com"));
-
-            for (int i = 0; i < 10; i++)
-            {
-                Create(new Customer("Phone", "Name", "LastName"));
-            }
         }
 
         public List<Customer> Customers
