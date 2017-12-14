@@ -44,7 +44,8 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Height="50" Label="Gem" Icon="Save" Command="{Binding NewCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="CustSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="CustAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">
@@ -92,11 +93,18 @@
                                      Text="{Binding ItemViewModelSelected.AreaCode, Mode=TwoWay}" x:Name="Areacode" Margin="20" 
                                  PlaceholderText="Indtast post nr" />
                         </Grid>
-                        <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" 
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Width="auto"  Grid.Row="6" Header="Information" 
                                  Text="{Binding ItemViewModelSelected.Info, Mode=TwoWay}" x:Name="Information" Margin="20" Height="150"
                                  PlaceholderText="Indtast information"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
+                        </Grid>
                     </StackPanel>
                 </StackPanel>
             </Grid>
