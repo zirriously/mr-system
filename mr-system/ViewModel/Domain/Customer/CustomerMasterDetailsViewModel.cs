@@ -70,17 +70,6 @@ namespace mr_system
             set
             {
                 _customerItemViewModel = value;
-                if (_customerItemViewModel == null)
-                {
-                    CustomerItem = null;
-                }
-                else
-                {
-                    CustomerItem = new CustomerItemViewModel(
-                        _customerItemViewModel.DomainObject);
-                }
-
-
                 OnPropertyChanged();
             }
         }
