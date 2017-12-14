@@ -6,8 +6,6 @@ namespace mr_system.Model
 {
     public class CustomerCatalog
     {
-
-
         private static int _keyCount = 1;
         private Dictionary<int, Customer> _customers;
 
@@ -23,15 +21,13 @@ namespace mr_system.Model
             Create(new Customer("36452658", "Troels", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             Create(new Customer("36452658", "Peter", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             Create(new Customer());
-            Create(new Customer("400", lastName: "hej", email: "44@mm.com"));
+            Create(new Customer("Phone", lastName: "LastName", email: "mail@mail.com"));
 
             for (int i = 0; i < 10; i++)
             {
-                Create(new Customer("4", "hej", "2"));
+                Create(new Customer("Phone", "Name", "LastName"));
             }
         }
-
-
 
         public List<Customer> Customers
         {
