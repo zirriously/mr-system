@@ -63,6 +63,16 @@ namespace mr_system
             }
         }
 
+        public string City
+        {
+            get { return _domainObject.City; }
+            set
+            {
+                _domainObject.City = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string AreaCode
         {
             get { return _domainObject.AreaCode; }
@@ -85,10 +95,10 @@ namespace mr_system
 
         public string Info
         {
-            get { return _domainObject.Information; }
+            get { return _domainObject.Info; }
             set
             {
-                _domainObject.Information = value;
+                _domainObject.Info = value;
                 OnPropertyChanged();
             }
         }
