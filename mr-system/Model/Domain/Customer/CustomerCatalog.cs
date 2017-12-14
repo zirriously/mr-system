@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Windows.Foundation.Metadata;
 using Windows.Media.SpeechRecognition;
@@ -12,6 +13,7 @@ namespace mr_system.Model
         private Dictionary<int, Customer> _customers;
         private FileSource<Customer> _fileSource;
         private List<Customer> _customerList;
+        private List<int> _maxKeyInList;
 
 
         public CustomerCatalog()
@@ -19,6 +21,7 @@ namespace mr_system.Model
             _fileSource = new FileSource<Customer>(new FileStringPersistence(), new JSONConverter<Customer>());
             _customerList = new List<Customer>();
             _customers = new Dictionary<int, Customer>();
+            _maxKeyInList = new List<int>();
             //Create(new Customer("36452658", "Albert", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             //Create(new Customer("36452658", "Frank", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             //Create(new Customer("36452658", "Mikkel", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
@@ -47,12 +50,14 @@ namespace mr_system.Model
         public async void Load()
         {
             _customerList = await _fileSource.Load();
-            _keyCount = _customerList.Count;
 
             foreach (var customer in _customerList)
             {
                 _customers.Add(customer.Key, customer);
+                _maxKeyInList.Add(customer.Key);
             }
+
+            _keyCount = _maxKeyInList.Max() +1;
         }
 
         public async void Save()
