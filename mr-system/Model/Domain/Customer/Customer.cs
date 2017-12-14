@@ -1,26 +1,24 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Net.Mail;
 using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
 
 public class Customer : INotifyPropertyChanged
 {
-    public Customer(Int64 cvr, string firstName, string lastname, string email, Int64 phone, string adress, double areaCode)
+    public Customer(string cvr = "", string firstName = "", string lastName = "", string email = "", string phone = "", string address = "", string areaCode = "")
     {
         Key = -1;
         Cvr = cvr;
         FirstName = firstName;
-        LastName = lastname;
+        LastName = lastName;
         Email = email;
         Phone = phone;
-        Adress = adress;
+        Adress = address;
         AreaCode = areaCode;
     }
 
     public int Key { get; set; }
 
-    public Int64 Cvr { get; set; }
+    public string Cvr { get; set; }
 
     public string FirstName { get; set; }
 
@@ -28,11 +26,11 @@ public class Customer : INotifyPropertyChanged
 
     public string Email { get; set; }
 
-    public Int64 Phone { get; set; }
+    public string Phone { get; set; }
 
     public string Adress { get; set; }
 
-    public double AreaCode { get; set; }
+    public string AreaCode { get; set; }
 
     public string Information { get; set; }
 
