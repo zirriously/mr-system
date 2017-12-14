@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="mr_system.View.Domain.Customer.CustomerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:mr_system.View.Domain.Customer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Click="Button_ClickGoBack" 
+                        HorizontalAlignment="left" 
+                        FontSize="28"
+                        Height="50">
+                    <StackPanel>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72B;"/>
+                    </StackPanel>
+                </Button>
+
+                <CommandBar Grid.Column="1"
+                                        Height="50"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        DefaultLabelPosition="Right"
+                                        Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+                    <AppBarButton Height="50" Label="Gem" Icon="Save"/>
+                </CommandBar>
+            </Grid>
+            <Grid Grid.Row="1" Margin="20">
+                <StackPanel>
+                        <StackPanel>
+                        <TextBlock Text="Kunde information" FontSize="25"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                            </Grid.RowDefinitions>
+                            <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
+                                 PlaceholderText="Indtast CVR" />
+                            <DatePicker Margin="20" Header="Kontakt kunden" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker" Width="auto"/>
+                            <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" x:Name="FirstName" Margin="20" 
+                                 PlaceholderText="Indtast fornavn" />
+                            <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" x:Name="Lastname" Margin="20" 
+                                 PlaceholderText="Indtast efternavn" />
+                            <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" x:Name="Phone" Margin="20" 
+                                 PlaceholderText="Indtast telefon nr" />
+                            <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" x:Name="Mail" Margin="20" 
+                                 PlaceholderText="Indtast email" />
+                            <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" x:Name="Street" Margin="20" 
+                                 PlaceholderText="Indtast gadenavn" />
+                            <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
+                                 PlaceholderText="Indtast By" />
+                            <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" x:Name="Areacode" Margin="20" 
+                                 PlaceholderText="Indtast post nr" />
+                        </Grid>
+                        <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="150"
+                                 PlaceholderText="Indtast information"
+                                 TextWrapping="Wrap"
+                                 AcceptsReturn="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

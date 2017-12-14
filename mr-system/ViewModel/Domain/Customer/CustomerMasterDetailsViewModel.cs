@@ -57,6 +57,11 @@ namespace mr_system
             }
         }
 
+        public void RefreshCustomerItemViewModelCollection()
+        {
+            OnPropertyChanged(nameof(ItemViewModelCollection));
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
