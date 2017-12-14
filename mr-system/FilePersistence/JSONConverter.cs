@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Demo.FilePersistence
+namespace mr_system.FilePersistence
 {
     /// <summary>
     /// JSON-specific implementation of the IDataConverter interface. 

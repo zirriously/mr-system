@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Demo.FilePersistence
+namespace mr_system.FilePersistence
 {
     /// <summary>
     /// File-specific implementation of IDataSource... interfaces. 

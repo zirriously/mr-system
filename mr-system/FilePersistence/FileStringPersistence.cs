@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Windows.Storage;
 
-namespace Demo.FilePersistence
+namespace mr_system.FilePersistence
 {
     /// <summary>
     /// File-specific implementation of the  IStringPersistence interface. 

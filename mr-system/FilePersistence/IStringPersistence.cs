@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Demo.FilePersistence
+namespace mr_system.FilePersistence
 {
     /// <summary>
     /// Interface for loading/saving a string to/from a persistent source.
