@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using mr_system.Commands;
 using mr_system.Model;
 
 namespace mr_system
@@ -11,11 +13,16 @@ namespace mr_system
         //private CustomerDetailsViewModel _customerDetailsViewModel;
         private CustomerItemViewModel _customerItemViewModel;
 
+        private DeleteCommand _deleteCommand;
+        private NewCommand _newCommand;
+
         public CustomerMasterDetailsViewModel()
         {
             _catalog = new CustomerCatalog();
             _customerItemViewModel = null;
             //_customerDetailsViewModel = null;
+            _deleteCommand = new DeleteCommand(_catalog, this);
+            _newCommand = new NewCommand(_catalog, this);
         }
 
        
@@ -47,12 +54,33 @@ namespace mr_system
             }
         }
 
+        public ICommand DeleteCommand
+        {
+            get { return _deleteCommand; }
+        }
+
+        public ICommand NewCommand
+        {
+            get { return _newCommand; }
+        }
+
         public CustomerItemViewModel ItemViewModelSelected
         {
             get { return _customerItemViewModel; }
             set
             {
                 _customerItemViewModel = value;
+                if (_customerItemViewModel == null)
+                {
+                    CustomerItem = null;
+                }
+                else
+                {
+                    CustomerItem = new CustomerItemViewModel(
+                        _customerItemViewModel.DomainObject);
+                }
+
+
                 OnPropertyChanged();
             }
         }
