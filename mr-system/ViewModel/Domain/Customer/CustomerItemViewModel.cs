@@ -15,10 +15,13 @@ namespace mr_system
             _domainObject = domainObject;
         }
 
+
         public Customer DomainObject
         {
             get { return _domainObject; }
         }
+
+        public int Key => _domainObject.Key;
 
         public string FirstName
         {
