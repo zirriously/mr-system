@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace mr_system
+namespace mr_system // ikke bruge
 {
     public class CustomerDetailsViewModel : INotifyPropertyChanged
     {

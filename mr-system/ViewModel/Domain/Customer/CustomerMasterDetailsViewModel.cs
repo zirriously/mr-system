@@ -8,14 +8,14 @@ namespace mr_system
     public class CustomerMasterDetailsViewModel : INotifyPropertyChanged
     {
         private CustomerCatalog _catalog;
-        private CustomerDetailsViewModel _customerDetailsViewModel;
+        //private CustomerDetailsViewModel _customerDetailsViewModel;
         private CustomerItemViewModel _customerItemViewModel;
 
         public CustomerMasterDetailsViewModel()
         {
             _catalog = new CustomerCatalog();
             _customerItemViewModel = null;
-            _customerDetailsViewModel = null;
+            //_customerDetailsViewModel = null;
         }
 
        
@@ -37,12 +37,12 @@ namespace mr_system
             get { return CreateItemViewModelCollection(_catalog); }
         }
 
-        public CustomerDetailsViewModel CustomerDetails
+        public CustomerItemViewModel CustomerItem
         {
-            get { return _customerDetailsViewModel; }
+            get { return _customerItemViewModel; }
             private set
             {
-                _customerDetailsViewModel = value;
+                _customerItemViewModel = value;
                 OnPropertyChanged();
             }
         }
@@ -50,19 +50,10 @@ namespace mr_system
         public CustomerItemViewModel ItemViewModelSelected
         {
             get { return _customerItemViewModel; }
-            set {
+            set
+            {
                 _customerItemViewModel = value;
-
-                if (_customerItemViewModel == null)
-                {
-                    CustomerDetails = null;
-                }
-                else
-                {
-                    CustomerDetails = new CustomerDetailsViewModel(
-                        _customerItemViewModel.DomainObject);
-                    OnPropertyChanged();
-                }
+                OnPropertyChanged();
             }
         }
 
