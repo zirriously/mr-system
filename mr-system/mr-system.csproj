@@ -95,6 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Commands\DeleteCommand.cs" />
+    <Compile Include="Commands\NewCommand.cs" />
     <Compile Include="FilePersistence\FileSource.cs" />
     <Compile Include="FilePersistence\FileStringPersistence.cs" />
     <Compile Include="FilePersistence\IStringConverter.cs" />
@@ -103,8 +105,6 @@
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
     <Compile Include="Model\Domain\Order\CaseOwner.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
-    <Compile Include="ViewModel\App\NewCommand.cs" />
-    <Compile Include="ViewModel\App\SaveCommand.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
@@ -160,6 +160,7 @@
     <Folder Include="DLL\" />
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
+    <Folder Include="ViewModel\App\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\App\MainPage.xaml">
