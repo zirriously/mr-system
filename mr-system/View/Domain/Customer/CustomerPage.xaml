@@ -68,22 +68,30 @@
                             <TextBox Grid.Column="0"  Grid.Row="1" Header="CVR" x:Name="Cvr" Margin="20" 
                                  PlaceholderText="Indtast CVR" Text="{Binding ItemViewModelSelected.CVR}" />
                             <DatePicker Margin="20" Header="Kontakt kunden" Grid.Column="1" Grid.Row="1" x:Name="CallBackDatePicker" Width="auto"/>
-                            <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" Text="{Binding ItemViewModelSelected.FirstName}" x:Name="FirstName" Margin="20" 
+                            <TextBox Grid.Column="0"  Grid.Row="2" Header="Fornavn" 
+                                     Text="{Binding ItemViewModelSelected.FirstName, Mode=TwoWay}" x:Name="FirstName" Margin="20" 
                                  PlaceholderText="Indtast fornavn" />
-                            <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" Text="{Binding ItemViewModelSelected.LastName}" x:Name="Lastname" Margin="20" 
+                            <TextBox Grid.Column="1"  Grid.Row="2" Header="Efternavn" 
+                                     Text="{Binding ItemViewModelSelected.LastName, Mode=TwoWay}" x:Name="Lastname" Margin="20" 
                                  PlaceholderText="Indtast efternavn" />
-                            <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" Text="{Binding ItemViewModelSelected.PhoneNumber}" x:Name="Phone" Margin="20" 
+                            <TextBox Grid.Column="0"  Grid.Row="3" Header="Telefon" 
+                                     Text="{Binding ItemViewModelSelected.PhoneNumber, Mode=TwoWay}" x:Name="Phone" Margin="20" 
                                  PlaceholderText="Indtast telefon nr" />
-                            <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" Text="{Binding ItemViewModelSelected.EmailAddress}" x:Name="Mail" Margin="20" 
+                            <TextBox Grid.Column="1"  Grid.Row="3" Header="Mail" 
+                                     Text="{Binding ItemViewModelSelected.EmailAddress, Mode=TwoWay}" x:Name="Mail" Margin="20" 
                                  PlaceholderText="Indtast email" />
-                            <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" Text="{Binding ItemViewModelSelected.Address}" x:Name="Street" Margin="20" 
+                            <TextBox Grid.Column="0"  Grid.Row="4" Header="Gadenavn" 
+                                     Text="{Binding ItemViewModelSelected.Address, Mode=TwoWay}" x:Name="Street" Margin="20" 
                                  PlaceholderText="Indtast gadenavn" />
-                            <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" Margin="20" 
+                            <TextBox Grid.Column="0"  Grid.Row="5" Header="By" x:Name="City" 
+                                     Text="{Binding ItemViewModelSelected.City, Mode=TwoWay}" Margin="20" 
                                  PlaceholderText="Indtast By" />
-                            <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" Text="{Binding ItemViewModelSelected.AreaCode}" x:Name="Areacode" Margin="20" 
+                            <TextBox Grid.Column="1"  Grid.Row="5" Header="Post nr" 
+                                     Text="{Binding ItemViewModelSelected.AreaCode, Mode=TwoWay}" x:Name="Areacode" Margin="20" 
                                  PlaceholderText="Indtast post nr" />
                         </Grid>
-                        <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" x:Name="Information" Margin="20" Height="150"
+                        <TextBox Grid.Column="0"  Grid.Row="6" Header="Information" 
+                                 Text="{Binding ItemViewModelSelected.Info, Mode=TwoWay}" x:Name="Information" Margin="20" Height="150"
                                  PlaceholderText="Indtast information"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
