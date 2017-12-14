@@ -13,16 +13,16 @@ namespace mr_system
         //private CustomerDetailsViewModel _customerDetailsViewModel;
         private CustomerItemViewModel _customerItemViewModel;
 
-        private DeleteCommand _deleteCommand;
-        private NewCommand _newCommand;
+        private DeleteCustomerCommand _deleteCommand;
+        private NewCustomerCommand _newCommand;
 
         public CustomerMasterDetailsViewModel()
         {
             _catalog = new CustomerCatalog();
             _customerItemViewModel = null;
             //_customerDetailsViewModel = null;
-            _deleteCommand = new DeleteCommand(_catalog, this);
-            _newCommand = new NewCommand(_catalog, this);
+            _deleteCommand = new DeleteCustomerCommand(_catalog, this);
+            _newCommand = new NewCustomerCommand(_catalog, this);
         }
 
        

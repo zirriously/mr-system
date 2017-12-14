@@ -8,13 +8,13 @@ using mr_system.Model;
 
 namespace mr_system.Commands
 {
-    public class NewCommand : ICommand
+    public class NewCustomerCommand : ICommand
     {
 
         private CustomerCatalog _catalog;
         private CustomerMasterDetailsViewModel _customerMasterDetailsViewModel;
 
-        public NewCommand(CustomerCatalog catalog, CustomerMasterDetailsViewModel mdvm)
+        public NewCustomerCommand(CustomerCatalog catalog, CustomerMasterDetailsViewModel mdvm)
         {
             _catalog = catalog;
             _customerMasterDetailsViewModel = mdvm;
