@@ -105,7 +105,6 @@
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
     <Compile Include="Model\Domain\CaseOwner\CaseOwner.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
-    <Compile Include="ViewModel\Domain\Customer\CustomerDetailsViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
     <Compile Include="Model\Domain\Customer\Customer.cs" />
