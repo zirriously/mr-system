@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Windows.Foundation.Metadata;
+using mr_system.FilePersistence;
 
 namespace mr_system.Model
 {
@@ -8,6 +9,7 @@ namespace mr_system.Model
     {
         private static int _keyCount = 1;
         private Dictionary<int, Customer> _customers;
+        private FileSource<Customer> _fileSource;
 
 
         public CustomerCatalog()
@@ -43,6 +45,11 @@ namespace mr_system.Model
         public void Delete(int key)
         {
             _customers.Remove(key);
+        }
+
+        public async void Save()
+        {
+            await _fileSource.Save(Customers);
         }
     }
 }

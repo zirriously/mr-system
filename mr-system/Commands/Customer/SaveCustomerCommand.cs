@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using mr_system.Model;
 
 namespace mr_system.Commands
@@ -13,6 +14,7 @@ namespace mr_system.Commands
             {
                 _catalog = catalog;
             }
+
 
             public bool CanExecute(object parameter)
             {
