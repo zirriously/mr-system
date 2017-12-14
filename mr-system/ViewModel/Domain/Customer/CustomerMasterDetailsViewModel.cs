@@ -8,30 +8,24 @@ namespace mr_system
     public class CustomerMasterDetailsViewModel : INotifyPropertyChanged
     {
         private CustomerCatalog _catalog;
-        //private CustomerDetailsViewModel _customerDetailsViewModel;
         private CustomerItemViewModel _customerItemViewModel;
 
         public CustomerMasterDetailsViewModel()
         {
             _catalog = new CustomerCatalog();
             _customerItemViewModel = null;
-            //_customerDetailsViewModel = null;
         }
 
-       
-        
-            private List<CustomerItemViewModel> CreateItemViewModelCollection(CustomerCatalog catalog)
+        private List<CustomerItemViewModel> CreateItemViewModelCollection(CustomerCatalog catalog)
+        {
+            List<CustomerItemViewModel> items = new List<CustomerItemViewModel>();
+            foreach (var obj in catalog.Customers)
             {
-                List<CustomerItemViewModel> items = new List<CustomerItemViewModel>();
-                foreach (var obj in catalog.Customers)
-                {
-                    items.Add(new CustomerItemViewModel(obj));
-                }
-                return items;
+                items.Add(new CustomerItemViewModel(obj));
             }
-        
-
-
+            return items;
+        }
+  
         public List<CustomerItemViewModel> ItemViewModelCollection
         {
             get { return CreateItemViewModelCollection(_catalog); }
