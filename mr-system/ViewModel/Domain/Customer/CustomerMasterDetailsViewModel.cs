@@ -10,8 +10,6 @@ namespace mr_system
     public class CustomerMasterDetailsViewModel : INotifyPropertyChanged
     {
         private CustomerCatalog _catalog;
-
-        //private CustomerDetailsViewModel _customerDetailsViewModel;
         private CustomerItemViewModel _customerItemViewModel;
 
         private DeleteCustomerCommand _deleteCommand;
@@ -22,10 +20,11 @@ namespace mr_system
         {
             _catalog = new CustomerCatalog();
             _customerItemViewModel = null;
-            //_customerDetailsViewModel = null;
             _deleteCommand = new DeleteCustomerCommand(_catalog, this);
             _newCommand = new NewCustomerCommand(_catalog, this);
             _saveCommand = new SaveCustomerCommand(_catalog);
+
+            _catalog.Load();
         }
 
         private List<CustomerItemViewModel> CreateItemViewModelCollection(CustomerCatalog catalog)
