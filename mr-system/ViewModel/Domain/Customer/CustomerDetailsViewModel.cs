@@ -18,7 +18,7 @@ namespace mr_system // ikke bruge
             get {return _domainObject;}
         }
 
-        public Int64 Cvr
+        public string Cvr
         {
             get { return _domainObject.Cvr; }
             set
@@ -50,7 +50,7 @@ namespace mr_system // ikke bruge
             }
         }
 
-        public double postnr
+        public string postnr
         {
             get { return _domainObject.AreaCode; }
             set
@@ -60,7 +60,7 @@ namespace mr_system // ikke bruge
             }
         }
 
-        public Int64 Tlf
+        public string Tlf
         {
             get { return _domainObject.Phone; }
             set

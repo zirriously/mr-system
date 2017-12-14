@@ -40,7 +40,7 @@ namespace mr_system
             }
         }
 
-        public Int64 PhoneNumber
+        public string PhoneNumber
         {
             get { return _domainObject.Phone; }
             set
@@ -60,7 +60,7 @@ namespace mr_system
             }
         }
 
-        public double AreaCode
+        public string AreaCode
         {
             get { return _domainObject.AreaCode; }
             set
@@ -90,7 +90,7 @@ namespace mr_system
             }
         }
 
-        public Int64 CVR
+        public string CVR
         {
             get { return _domainObject.Cvr; }
             set
