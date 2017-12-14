@@ -4,8 +4,9 @@ namespace mr_system.Model
 {
     public class Orders
     {
-        public Orders (string orderInfo, double pris, string materials, string production, string measurements,
-            int numberOfItems, string delivery)
+        public Orders(string orderInfo = "", string pris = "", string materials = "", string production = "",
+            string measurements = "",
+            string numberOfItems = "", string delivery = "")
         {
             Key = -1;
             OrderInfo = orderInfo;
@@ -15,11 +16,10 @@ namespace mr_system.Model
             Measurements = measurements;
             NumberOfItems = numberOfItems;
             DeliveryInfo = delivery;
-            
         }
 
         public string ExpectedDelivery { get; set; }
-       
+
 
         public string OrderName { get; set; }
 
@@ -29,9 +29,9 @@ namespace mr_system.Model
 
         public string Measurements { get; set; }
 
-        public int NumberOfItems { get; set; }
+        public string NumberOfItems { get; set; }
 
-        public double Price { get; set; }
+        public string Price { get; set; }
 
         public string Materials { get; set; }
 

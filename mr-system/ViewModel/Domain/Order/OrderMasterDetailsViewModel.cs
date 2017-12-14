@@ -12,12 +12,14 @@ namespace mr_system
         private OrderCatalog _catalog;
         private OrderItemViewModel _orderItemViewModelSelected;
         private DeleteOrderCommand _deleteCommand;
+        private NewOrderCommand _newOrderCommand;
 
         public OrderMasterDetailsViewModel()
         {
             _catalog = new OrderCatalog();
             _orderItemViewModelSelected = null;
             _deleteCommand = new DeleteOrderCommand(_catalog, this);
+            _newOrderCommand = new NewOrderCommand(_catalog, this);
         }
 
         private List<OrderItemViewModel> CreateItemViewModelCollection(OrderCatalog catalog)
@@ -44,6 +46,11 @@ namespace mr_system
         public ICommand DeleteCommand
         {
             get {return _deleteCommand;}
+        }
+
+        public ICommand NewCommand
+        {
+            get { return _newOrderCommand; }
         }
         public void RefreshOrderItemViewModelCollection()
         {

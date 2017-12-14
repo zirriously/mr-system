@@ -51,7 +51,7 @@ namespace mr_system
 
         
 
-        public int NumberOfItems
+        public string NumberOfItems
         { get { return _domainObject.NumberOfItems; }
             set
             {
@@ -60,7 +60,7 @@ namespace mr_system
             } 
         }
 
-        public double Price
+        public string Price
         {
             get { return _domainObject.Price; }
             set

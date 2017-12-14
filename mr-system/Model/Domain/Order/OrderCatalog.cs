@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using mr_system.FilePersistence;
 
 namespace mr_system.Model
 {
@@ -7,6 +8,7 @@ namespace mr_system.Model
     {
         private static int _keyCount = 1;
         private Dictionary<int, Orders> _orders;
+        private FileSource<Orders> _fileSource;
 
       
         public OrderCatalog()
@@ -31,6 +33,9 @@ namespace mr_system.Model
         {
             _orders.Remove(key);
         }
-      
+        public async void Save()
+        {
+            await _fileSource.Save(Orders);
+        }
     }
 }
