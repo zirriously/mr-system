@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 public class Customer : INotifyPropertyChanged
 {
-    public Customer(string cvr = "", string firstName = "", string lastName = "", string email = "", string phone = "", string address = "", string areaCode = "")
+    public Customer(string cvr = "", string firstName = "", string lastName = "", string email = "", string phone = "", string address = "", string city = "", string areaCode = "", string info = "")
     {
         Key = -1;
         Cvr = cvr;
@@ -13,7 +13,9 @@ public class Customer : INotifyPropertyChanged
         Email = email;
         Phone = phone;
         Adress = address;
+        City = city;
         AreaCode = areaCode;
+        Info = info;
     }
 
     public int Key { get; set; }
@@ -30,9 +32,11 @@ public class Customer : INotifyPropertyChanged
 
     public string Adress { get; set; }
 
+    public string City { get; set; }
+
     public string AreaCode { get; set; }
 
-    public string Information { get; set; }
+    public string Info { get; set; }
 
     
     public event PropertyChangedEventHandler PropertyChanged;
