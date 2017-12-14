@@ -24,15 +24,15 @@ namespace mr_system.ViewModel.Domain.CaseOwner
             get { return _domainObject; }
         }
 
-        public string Name
-        {
-            get { return _domainObject.Name; }
-            set
-            {
-                _domainObject.Name = value;
-                OnPropertyChanged();
-            }
-        }
+        //public string Name
+        //{
+        //    get { return _domainObject.Name; }
+        //    set
+        //    {
+        //        _domainObject.Name = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 
