@@ -95,8 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commands\DeleteCommand.cs" />
-    <Compile Include="Commands\NewCommand.cs" />
+    <Compile Include="Commands\Customer\DeleteCustomerCommand.cs" />
+    <Compile Include="Commands\Customer\NewCustomerCommand.cs" />
+    <Compile Include="Commands\Customer\SaveCustomerCommand.cs" />
     <Compile Include="FilePersistence\FileSource.cs" />
     <Compile Include="FilePersistence\FileStringPersistence.cs" />
     <Compile Include="FilePersistence\IStringConverter.cs" />

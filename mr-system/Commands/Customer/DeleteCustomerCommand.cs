@@ -8,12 +8,12 @@ using mr_system.Model;
 
 namespace mr_system.Commands
 {
-    public class DeleteCommand : ICommand
+    public class DeleteCustomerCommand : ICommand
     {
         private CustomerCatalog _catalog;
         private CustomerMasterDetailsViewModel _customerMasterDetailsView;
 
-        public DeleteCommand(CustomerCatalog catalog, CustomerMasterDetailsViewModel viewModel)
+        public DeleteCustomerCommand(CustomerCatalog catalog, CustomerMasterDetailsViewModel viewModel)
         {
             _catalog = catalog;
             _customerMasterDetailsView = viewModel;
