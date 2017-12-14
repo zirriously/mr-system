@@ -105,6 +105,8 @@
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
     <Compile Include="Model\Domain\CaseOwner\CaseOwner.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\Domain\CaseOwner\CaseOwnerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
     <Compile Include="Model\Domain\Customer\Customer.cs" />
@@ -163,7 +165,6 @@
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
     <Folder Include="ViewModel\App\" />
-    <Folder Include="ViewModel\Domain\CaseOwner\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\App\MainPage.xaml">
