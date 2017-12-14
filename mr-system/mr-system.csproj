@@ -98,6 +98,9 @@
     <Compile Include="Commands\Customer\DeleteCustomerCommand.cs" />
     <Compile Include="Commands\Customer\NewCustomerCommand.cs" />
     <Compile Include="Commands\Customer\SaveCustomerCommand.cs" />
+    <Compile Include="Commands\Order\DeleteOrderCommand.cs" />
+    <Compile Include="Commands\Order\NewOrderCommand.cs" />
+    <Compile Include="Commands\Order\SaveOrderCommand.cs" />
     <Compile Include="FilePersistence\FileSource.cs" />
     <Compile Include="FilePersistence\FileStringPersistence.cs" />
     <Compile Include="FilePersistence\IStringConverter.cs" />

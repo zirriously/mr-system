@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using mr_system.Commands.Order;
 using mr_system.Model;
 
 namespace mr_system
@@ -9,11 +11,13 @@ namespace mr_system
     {
         private OrderCatalog _catalog;
         private OrderItemViewModel _orderItemViewModelSelected;
+        private DeleteOrderCommand _deleteCommand;
 
         public OrderMasterDetailsViewModel()
         {
             _catalog = new OrderCatalog();
             _orderItemViewModelSelected = null;
+            _deleteCommand = new DeleteOrderCommand(_catalog, this);
         }
 
         private List<OrderItemViewModel> CreateItemViewModelCollection(OrderCatalog catalog)
@@ -25,8 +29,26 @@ namespace mr_system
             }
             return items;
         }
+        public OrderItemViewModel ItemViewModelSelected
+        {
+            get { return _orderItemViewModelSelected; }
+            set
+            {
+                _orderItemViewModelSelected = value;
+                OnPropertyChanged();
+                _deleteCommand.RaiseCanExecuteChanged();
+                
+            }
+        }
 
-
+        public ICommand DeleteCommand
+        {
+            get {return _deleteCommand;}
+        }
+        public void RefreshOrderItemViewModelCollection()
+        {
+            OnPropertyChanged(nameof(OrderItemViewModelCollection));
+        }
         public List<OrderItemViewModel> OrderItemViewModelCollection
         {
             get { return CreateItemViewModelCollection(_catalog); }
