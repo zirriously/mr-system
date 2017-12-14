@@ -13,6 +13,12 @@ namespace mr_system.Commands
 
         private CustomerCatalog _catalog;
         private CustomerMasterDetailsViewModel _customerMasterDetailsViewModel;
+
+        public NewCommand(CustomerCatalog catalog, CustomerMasterDetailsViewModel mdvm)
+        {
+            _catalog = catalog;
+            _customerMasterDetailsViewModel = mdvm;
+        }
         public bool CanExecute(object parameter)
 
         {
@@ -21,7 +27,8 @@ namespace mr_system.Commands
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            _catalog.Create(new Customer());
+            _customerMasterDetailsViewModel.RefreshCustomerItemViewModelCollection();
         }
 
         public event EventHandler CanExecuteChanged;

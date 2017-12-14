@@ -44,7 +44,7 @@
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
                     <AppBarButton Height="50" Label="Opret ny kunde" Icon="Add" Click="NewCustomerButton_Click"/>
                     <AppBarButton Height="50" Label="Rediger kunde" Icon="Edit"/>
-                    <AppBarButton Height="50" Label="Slet kunde" Icon="Delete"/>
+                    <AppBarButton Height="50" Label="Slet kunde" Icon="Delete" Command="{Binding DeleteCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1">
