@@ -75,6 +75,7 @@ namespace mr_system
             {
                 _customerItemViewModel = value;
                 OnPropertyChanged();
+                _deleteCommand.RaiseCanExecuteChanged();
             }
         }
 

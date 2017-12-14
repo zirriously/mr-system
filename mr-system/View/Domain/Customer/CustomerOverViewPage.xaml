@@ -48,7 +48,7 @@
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1">
-                <ListView  ItemsSource="{Binding ItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected.Key, Mode=TwoWay}">
+                <ListView  ItemsSource="{Binding ItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
                     <ListView.HeaderTemplate>
                         <DataTemplate>
                             <Grid Padding="12">

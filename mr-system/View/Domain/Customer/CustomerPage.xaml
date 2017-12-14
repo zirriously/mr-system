@@ -44,7 +44,7 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
+                    <AppBarButton Height="50" Label="Gem" Icon="Save" Command="{Binding NewCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">
@@ -53,8 +53,10 @@
                         <TextBlock Text="Kunde information" FontSize="25"/>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1*" />
