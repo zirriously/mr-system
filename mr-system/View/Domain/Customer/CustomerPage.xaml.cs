@@ -12,29 +12,27 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using mr_system.View.Domain.Customer;
-using mr_system.View.Order;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace mr_system.View
+namespace mr_system.View.Domain.Customer
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class OverViewPage : Page
+    public sealed partial class CustomerPage : Page
     {
-        public OverViewPage()
+        public CustomerPage()
         {
             this.InitializeComponent();
         }
 
-        private void Button_ClickNewOrder(object sender, RoutedEventArgs e)
+        private void Button_ClickGoBack(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(OrderPage));
+            this.Frame.Navigate(typeof(CustomerOverViewPage));
         }
 
-        private void Button_ClickNewCustomer(object sender, RoutedEventArgs e)
+        private void NewCustomerButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CustomerPage));
         }
