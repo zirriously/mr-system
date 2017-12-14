@@ -44,7 +44,7 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Height="50" Label="Gem" Icon="Save" Command="{Binding NewCustomerCommand}"/>
+                    <AppBarButton Height="50" Label="Gem" Icon="Save" Command="{Binding DeleteCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">
