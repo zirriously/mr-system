@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Windows.Foundation.Metadata;
+using Windows.Media.SpeechRecognition;
 using mr_system.FilePersistence;
 
 namespace mr_system.Model
@@ -10,11 +11,12 @@ namespace mr_system.Model
         private static int _keyCount = 1;
         private Dictionary<int, Customer> _customers;
         private FileSource<Customer> _fileSource;
+        private List<Customer> _customerList;
 
 
         public CustomerCatalog()
         {
-            _fileSource = new FileSource<Customer>(new FileStringPersistence(), new JSONConverter<Customer>());
+            _customerList = new List<Customer>();
             _customers = new Dictionary<int, Customer>();
             Create(new Customer("36452658", "Albert", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             Create(new Customer("36452658", "Frank", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
@@ -39,6 +41,11 @@ namespace mr_system.Model
         public void Delete(int key)
         {
             _customers.Remove(key);
+        }
+
+        public async void Load()
+        {
+            _customerList = await   
         }
 
         public async void Save()
