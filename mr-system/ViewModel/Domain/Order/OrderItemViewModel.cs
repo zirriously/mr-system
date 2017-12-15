@@ -18,6 +18,15 @@ namespace mr_system
             get { return _domainObject; }
         }
 
+        public string CaseOwner
+        {
+            get { return _domainObject.CaseOwner; }
+            set
+            {
+                _domainObject.CaseOwner = value;
+                OnPropertyChanged();
+            }
+        }
         public string OrderName
         {
            get { return _domainObject.OrderName; }
