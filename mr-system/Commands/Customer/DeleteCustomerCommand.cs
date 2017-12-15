@@ -38,7 +38,6 @@ namespace mr_system.Commands
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
 
-
         public event EventHandler CanExecuteChanged;
     }
 }
