@@ -23,6 +23,7 @@ namespace mr_system
             _deleteCommand = new DeleteCustomerCommand(_catalog, this);
             _newCommand = new NewCustomerCommand(_catalog, this);
             _saveCommand = new SaveCustomerCommand(_catalog);
+            RefreshCustomerItemViewModelCollection();
 
             _catalog.Load();
         }

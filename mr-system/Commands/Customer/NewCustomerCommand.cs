@@ -37,6 +37,7 @@ namespace mr_system.Commands
                 _customerMasterDetailsViewModel.ItemViewModelSelected.AreaCode, 
                 _customerMasterDetailsViewModel.ItemViewModelSelected.Info));
             _customerMasterDetailsViewModel.RefreshCustomerItemViewModelCollection();
+            _catalog.Save();
         }
 
         public event EventHandler CanExecuteChanged;
