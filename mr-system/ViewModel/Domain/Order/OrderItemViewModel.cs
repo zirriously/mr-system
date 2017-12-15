@@ -110,6 +110,76 @@ namespace mr_system
             }
         }
 
+        public string Media1
+        {
+            get { return _domainObject.Media1; }
+            set
+            {
+                _domainObject.Media1 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Media2
+        {
+            get { return _domainObject.Media2; }
+            set
+            {
+                _domainObject.Media2 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Laminat1
+        {
+            get { return _domainObject.Laminat1; }
+            set
+            {
+                _domainObject.Laminat1 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Laminat2
+        {
+            get { return _domainObject.Laminat2; }
+            set
+            {
+                _domainObject.Laminat2 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Measurements2
+        {
+            get { return _domainObject.Measurements2; }
+            set
+            {
+                _domainObject.Measurements2 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string DtpPrice
+        {
+            get { return _domainObject.DtpPrice; }
+            set
+            {
+                _domainObject.DtpPrice = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string SpecialOrderInfo
+        {
+            get { return _domainObject.SpecialOrderInfo; }
+            set
+            {
+                _domainObject.SpecialOrderInfo = value; 
+                OnPropertyChanged();
+            }
+        }
+
         //public string ExpectedDelivery
         //{
         //    get { return _domainObject.; }
