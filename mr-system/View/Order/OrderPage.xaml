@@ -78,9 +78,11 @@
                                                 <ColumnDefinition Width="100*" />
                                                 <ColumnDefinition Width="100*" />
                                             </Grid.ColumnDefinitions>
-                                            <ComboBox ItemsSource="{Binding ItemViewModelSelected}" Grid.Column="0" Grid.Row="0" PlaceholderText="Tildel Sagsbehandler" x:Name="CaseOwner" Header="Sagsbehandler" Width="auto"  Margin="20"
-                                               DisplayMemberPath="Source"/>
-
+                                            <ComboBox SelectedItem="{Binding ItemViewModelSelected, Mode=OneWay}" Grid.Column="0" Grid.Row="0" PlaceholderText="Tildel Sagsbehandler" Header="Sagsbehandler" Width="auto"  Margin="20">
+                                                <ComboBoxItem Content="MR Staff"/>
+                                                <ComboBoxItem Content="Jan Frølich Wulff"/>
+                                                <ComboBoxItem Content="Thomas Levin"/>
+                                            </ComboBox>
                                             <DatePicker Grid.Column="1" Grid.Row="0" Margin="20" Header="Forventet levering" x:Name="DeliveryDatePicker" Width="auto"/>
                                         </Grid>
                                         <TextBox Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"

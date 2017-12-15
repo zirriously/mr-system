@@ -106,11 +106,9 @@
     <Compile Include="FilePersistence\IStringConverter.cs" />
     <Compile Include="FilePersistence\IStringPersistence.cs" />
     <Compile Include="FilePersistence\JSONConverter.cs" />
-    <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
-    <Compile Include="Model\Domain\CaseOwner\CaseOwner.cs" />
+    <Compile Include="Model\Domain\Order\CustomerCatalog.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="ViewModel\Domain\CaseOwner\CaseOwnerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
     <Compile Include="Model\Domain\Customer\Customer.cs" />
