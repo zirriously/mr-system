@@ -22,6 +22,7 @@ namespace mr_system
             _deleteCommand = new DeleteOrderCommand(_catalog, this);
             _newOrderCommand = new NewOrderCommand(_catalog, this);
             _saveCommand = new SaveOrderCommand(_catalog);
+            _catalog.Load();
         }
 
         private List<OrderItemViewModel> CreateItemViewModelCollection(OrderCatalog catalog)
