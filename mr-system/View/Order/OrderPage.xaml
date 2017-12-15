@@ -149,11 +149,10 @@
                                                 <RowDefinition Height="1*" />
                                                 <RowDefinition Height="1*" />
                                             </Grid.RowDefinitions>
-                                            <TextBox  TextChanged="textChangedEventHandler" Grid.Row="0" Header="Pris" Margin="0,30,20,30" x:Name="OverAllPrice" 
+                                            <TextBox TextChanged="OverAllPrice_OnTextChanged" Grid.Row="0" Header="Pris" Margin="0,30,20,30" x:Name="OverAllPrice" 
                                                  PlaceholderText="kr" Height="60" Width="80" HorizontalAlignment="left"/>
-                                            <TextBlock Grid.Row="1"  Text="750 kr inkl. moms" Width="150" Margin="0,0,20,0" HorizontalAlignment="left" x:Name="PriceWithTax"></TextBlock>
-                                            <TextBlock Grid.Row="2"  Text="1000 kr eks. moms" Width="150" Margin="0,-30,25,0" HorizontalAlignment="left" x:Name="PriceWithoutTax"></TextBlock>
-                                            </Grid>
+                                            <TextBlock Grid.Row="1"  Width="150" Margin="0,0,20,0" HorizontalAlignment="left" x:Name="PriceWithoutTax"></TextBlock>
+                                        </Grid>
                                         </Grid>
                                 </StackPanel>
                             </StackPanel>

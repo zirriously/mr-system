@@ -37,10 +37,19 @@ namespace mr_system.View.Order
             
         }
 
-        private void textChangedEventHandler(object sender, TextChangedEventArgs e)
+        private void OverAllPrice_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            //PriceWithTax.Text = PriceWithTax.Text.ToFlo * 0.75;
-            //PriceWithoutTax = PriceWithTax;
+            double _priceWithoutTax;
+            try
+            {
+                _priceWithoutTax = Convert.ToDouble(OverAllPrice.Text);
+                _priceWithoutTax = _priceWithoutTax * 0.75;
+                PriceWithoutTax.Text = _priceWithoutTax.ToString() + ",- dkk uden moms";
+            }
+            catch (Exception exception)
+            {
+                return;
+            }
         }
     }
 }
