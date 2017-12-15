@@ -4,10 +4,11 @@ namespace mr_system.Model
 {
     public class Orders
     {
-        public Orders(string orderName = "", string orderInfo = "", string pris = "", string materials = "", string production = "",
+        public Orders(string caseOwner = "", string orderName = "", string orderInfo = "", string pris = "", string materials = "", string production = "",
             string measurements = "",
             string numberOfItems = "", string delivery = "")
         {
+            CaseOwner = caseOwner;
             Key = -1;
             OrderInfo = orderInfo;
             Price = pris;
@@ -19,6 +20,7 @@ namespace mr_system.Model
             OrderName = orderName;
         }
 
+        public string CaseOwner { get; set; }
         public string ExpectedDelivery { get; set; }
 
 
