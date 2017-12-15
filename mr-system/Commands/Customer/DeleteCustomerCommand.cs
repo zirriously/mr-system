@@ -31,6 +31,8 @@ namespace mr_system.Commands
             _customerMasterDetailsView.ItemViewModelSelected = null;
 
             _customerMasterDetailsView.RefreshCustomerItemViewModelCollection();
+
+            _catalog.Save();
         }
 
         public void RaiseCanExecuteChanged()

@@ -6,7 +6,7 @@ namespace mr_system.Model
 {
     public class OrderCatalog
     {
-        private static int _keyCount = 1;
+        private List<Orders> _orderList;
         private Dictionary<int, Orders> _orders;
         private FileSource<Orders> _fileSource;
 
@@ -15,7 +15,8 @@ namespace mr_system.Model
         {
             _fileSource = new FileSource<Orders>(new FileStringPersistence(), new JSONConverter<Orders>());
             _orders = new Dictionary<int, Orders>();
-
+            //Create(new Orders("Fox", "Pølse", "5000"));
+            _orderList = new List<Orders>();
           
         }
 
@@ -26,10 +27,20 @@ namespace mr_system.Model
       
         public void Create(Orders s)
         {
-            s.Key = _keyCount++;
+            s.Key = _orders.Count == 0 ? 1 : _orders.Keys.Max() + 1;
             _orders.Add(s.Key, s);
         }
 
+        public async void Load()
+        {
+            _orderList = await _fileSource.Load();
+
+
+            foreach (var orders in _orderList)
+            {
+                _orders.Add(orders.Key, orders);
+            }
+        }
         public void Delete(int key)
         {
             _orders.Remove(key);

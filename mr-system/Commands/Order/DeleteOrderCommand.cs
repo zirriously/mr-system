@@ -27,6 +27,7 @@ namespace mr_system.Commands.Order
             _orderMasterDetailsViewModel.ItemViewModelSelected = null;
 
             _orderMasterDetailsViewModel.RefreshOrderItemViewModelCollection();
+            _catalog.Save();
         }
         public void RaiseCanExecuteChanged()
         {
