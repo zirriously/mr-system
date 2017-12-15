@@ -14,12 +14,13 @@ namespace mr_system.Model
         private FileSource<Customer> _fileSource;
         private List<Customer> _customerList;
 
-
         public CustomerCatalog()
         {
             _fileSource = new FileSource<Customer>(new FileStringPersistence(), new JSONConverter<Customer>());
             _customerList = new List<Customer>();
             _customers = new Dictionary<int, Customer>();
+
+            // TODO - DEBUG
             //Create(new Customer("36452658", "Albert", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             //Create(new Customer("36452658", "Frank", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
             //Create(new Customer("36452658", "Mikkel", "Sørensen", "Mail@mail.dk", "66254292", "Søndergade 20", "4180"));
@@ -50,11 +51,10 @@ namespace mr_system.Model
         {
             _customerList = await _fileSource.Load();
 
-            
-                foreach (var customer in _customerList)
-                {
-                    _customers.Add(customer.Key, customer);
-                }
+            foreach (var customer in _customerList)
+            {
+                _customers.Add(customer.Key, customer);
+            }
         }
 
         public async void Save()
