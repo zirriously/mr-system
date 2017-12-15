@@ -36,5 +36,11 @@ namespace mr_system.View.Order
         {
             
         }
+
+        private void textChangedEventHandler(object sender, TextChangedEventArgs e)
+        {
+            //PriceWithTax.Text = PriceWithTax.Text.ToFlo * 0.75;
+            //PriceWithoutTax = PriceWithTax;
+        }
     }
 }
