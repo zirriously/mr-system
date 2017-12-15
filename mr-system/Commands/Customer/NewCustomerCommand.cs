@@ -10,7 +10,7 @@ namespace mr_system.Commands
 {
     public class NewCustomerCommand : ICommand
     {
-
+ 
         private CustomerCatalog _catalog;
         private CustomerMasterDetailsViewModel _customerMasterDetailsViewModel;
 
@@ -27,7 +27,15 @@ namespace mr_system.Commands
 
         public void Execute(object parameter)
         {
-            _catalog.Create(new Customer());
+            _catalog.Create(new Customer(_customerMasterDetailsViewModel.ItemViewModelSelected.CVR, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.FirstName, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.LastName, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.EmailAddress, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.PhoneNumber, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.Address, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.City, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.AreaCode, 
+                _customerMasterDetailsViewModel.ItemViewModelSelected.Info));
             _customerMasterDetailsViewModel.RefreshCustomerItemViewModelCollection();
         }
 

@@ -19,7 +19,7 @@ namespace mr_system
         public CustomerMasterDetailsViewModel()
         {
             _catalog = new CustomerCatalog();
-            _customerItemViewModel = null;
+            _customerItemViewModel = new CustomerItemViewModel(new Customer());
             _deleteCommand = new DeleteCustomerCommand(_catalog, this);
             _newCommand = new NewCustomerCommand(_catalog, this);
             _saveCommand = new SaveCustomerCommand(_catalog);
