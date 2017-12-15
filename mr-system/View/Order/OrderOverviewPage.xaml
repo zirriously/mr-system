@@ -78,7 +78,7 @@
                                         <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderName}" />
                                         <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderInfo}"/>
                                         <TextBlock Grid.Column="2" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding ExpectedDelivery}"/>
-                                        <TextBlock Grid.Column="3" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Price}"/>
+                                        <TextBlock Grid.Column="3" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding CaseOwner}"/>
                                     </Grid>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
