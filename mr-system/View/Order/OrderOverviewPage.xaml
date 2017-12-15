@@ -32,7 +32,7 @@
                            Height="50"
                            FontSize="28"
                            VerticalAlignment="Center"
-                           Text="Kunder"
+                           Text="Ordrer"
                            Margin="10,15,0,0"/>
 
                 <CommandBar Grid.Column="1"
