@@ -12,64 +12,85 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView  ItemsSource="{Binding OrderItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
-            <ListView.HeaderTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid Margin="0,-25,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Style="{StaticResource TitleTextBlockStyle}"
-                                       Height="50"
-                                       FontSize="28"
-                                       VerticalAlignment="Center"
-                                       Text="Ordrer"
-                                       Margin="10,15,0,0"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
-                            <CommandBar Grid.Column="1"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Style="{StaticResource TitleTextBlockStyle}"
+                           Height="50"
+                           FontSize="28"
+                           VerticalAlignment="Center"
+                           Text="Kunder"
+                           Margin="10,15,0,0"/>
+
+                <CommandBar Grid.Column="1"
                                         Height="50"
                                         HorizontalAlignment="Right"
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                                <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Click="NewOrderButton_Click"/>
-                                <AppBarButton Height="50" Label="Rediger ordre" Icon="Edit"/>
-                                <AppBarButton Height="50" Label="Slet ordre" Icon="Delete"/>
-                            </CommandBar>
-                        </Grid>
-                        <Grid Padding="12" Margin="0,60,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" Text="Ordre" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" Text="Forventet levering" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="3" Text="Sagsbehandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        </Grid>
-                    </Grid>
-                </DataTemplate>
-            </ListView.HeaderTemplate>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Height="48">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderName}" />
-                        <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderInfo }"/>
-                        <TextBlock Grid.Column="2" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding ExpectedDelivery }"/>
-                        <TextBlock Grid.Column="3" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Price }"/>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                    <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Click="NewOrderButton_Click"/>
+                    <AppBarButton Height="50" Label="Rediger ordre" Icon="Edit"/>
+                    <AppBarButton Height="50" Label="Slet ordre" Icon="Delete" Command="{Binding DeleteCommand}"/>
+                </CommandBar>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ScrollViewer>
+                    <StackPanel>
+                        <ListView  ItemsSource="{Binding OrderItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
+                            <ListView.HeaderTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="12">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="Navn" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                        <TextBlock Grid.Column="1" Text="Ordre" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                        <TextBlock Grid.Column="2" Text="Forventet levering" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                        <TextBlock Grid.Column="3" Text="Sagsbehandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.HeaderTemplate>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderName}" />
+                                        <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderInfo}"/>
+                                        <TextBlock Grid.Column="2" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding ExpectedDelivery}"/>
+                                        <TextBlock Grid.Column="3" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Price}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
