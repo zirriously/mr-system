@@ -87,7 +87,7 @@
                                             </StackPanel>
                                             <DatePicker Grid.Column="1" Grid.Row="0" Margin="20" Header="Forventet levering" x:Name="DeliveryDatePicker" Width="auto"/>
                                         </Grid>
-                                        <TextBox Grid.Row="1" Header="Forspørgsel" x:Name="request" Margin="20" Height="200"
+                                        <TextBox Grid.Row="1" Header="Forespørgsel" x:Name="request" Margin="20" Height="200"
                                      PlaceholderText="Indtast ordre informationer"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
