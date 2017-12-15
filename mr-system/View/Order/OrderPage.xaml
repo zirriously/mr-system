@@ -11,9 +11,10 @@
     <Page.DataContext>
         <mrSystem:OrderMasterDetailsViewModel/>
     </Page.DataContext>
-
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid>
+        <ScrollViewer>
+            <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
@@ -254,5 +255,6 @@
                 </StackPanel>
             </Grid>
         </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
