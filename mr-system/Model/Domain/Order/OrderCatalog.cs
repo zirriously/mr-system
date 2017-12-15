@@ -15,7 +15,7 @@ namespace mr_system.Model
         {
             _fileSource = new FileSource<Orders>(new FileStringPersistence(), new JSONConverter<Orders>());
             _orders = new Dictionary<int, Orders>();
-
+            Create(new Orders("Pølse", "5000"));
           
         }
 

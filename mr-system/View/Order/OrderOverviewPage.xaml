@@ -6,9 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
+    <Page.DataContext>
+        <local:OrderMasterDetailsViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView  ItemsSource="{}" SelectionChanged="ListView_SelectionChanged">
+        <ListView  ItemsSource="{Binding OrderItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Grid>
@@ -57,10 +61,12 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{}" />
-                        <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{}"/>
-                        <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{}"/>
+                        <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderName}" />
+                        <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding OrderInfo }"/>
+                        <TextBlock Grid.Column="2" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding ExpectedDelivery }"/>
+                        <TextBlock Grid.Column="3" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Price }"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
