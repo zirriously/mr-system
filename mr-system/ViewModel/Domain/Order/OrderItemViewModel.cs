@@ -50,10 +50,10 @@ namespace mr_system
 
         public string Measurements
         {
-            get { return _domainObject.Measurements; }
+            get { return _domainObject.Measurements1; }
             set
             {
-                _domainObject.Measurements = value;
+                _domainObject.Measurements1 = value;
                 OnPropertyChanged();
             }
         } 
@@ -61,7 +61,8 @@ namespace mr_system
         
 
         public string NumberOfItems
-        { get { return _domainObject.NumberOfItems; }
+        {
+            get { return _domainObject.NumberOfItems; }
             set
             {
                 _domainObject.NumberOfItems = value;
@@ -101,23 +102,23 @@ namespace mr_system
 
         public string DeliveryInfo
         {
-            get { return _domainObject.DeliveryInfo; }
+            get { return _domainObject.Delivery; }
             set
             {
-                _domainObject.DeliveryInfo = value;
+                _domainObject.Delivery = value;
                 OnPropertyChanged();
             }
         }
 
-        public string ExpectedDelivery
-        {
-            get { return _domainObject.ExpectedDelivery; }
-            set
-            {
-                _domainObject.ExpectedDelivery = value;
-                OnPropertyChanged();
-            }
-        }
+        //public string ExpectedDelivery
+        //{
+        //    get { return _domainObject.; }
+        //    set
+        //    {
+        //        _domainObject.ExpectedDelivery = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 
