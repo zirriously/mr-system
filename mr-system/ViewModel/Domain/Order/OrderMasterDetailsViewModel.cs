@@ -18,7 +18,7 @@ namespace mr_system
         public OrderMasterDetailsViewModel()
         {
             _catalog = new OrderCatalog();
-            _orderItemViewModelSelected = null;
+            _orderItemViewModelSelected = new OrderItemViewModel(new Orders());
             _deleteCommand = new DeleteOrderCommand(_catalog, this);
             _newOrderCommand = new NewOrderCommand(_catalog, this);
             _saveCommand = new SaveOrderCommand(_catalog);

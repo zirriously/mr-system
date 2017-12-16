@@ -86,9 +86,9 @@
                                                     <ComboBoxItem Content="Thomas Levin "/>
                                                 </ComboBox>
                                             </StackPanel>
-                                            <DatePicker Grid.Column="1" Grid.Row="0" Margin="20" Header="Forventet levering" x:Name="DeliveryDatePicker" Width="auto"/>
+                                            <DatePicker Grid.Column="1" Grid.Row="0" Margin="20" Header="Forventet levering" Date="{Binding ItemViewModelSelected.DeliveryInfo}" x:Name="DeliveryDatePicker" Width="auto"/>
                                         </Grid>
-                                        <TextBox Grid.Row="1" Header="Forespørgsel" x:Name="request" Margin="20" Height="200"
+                                        <TextBox Grid.Row="1" Header="Forespørgsel" Text="{Binding ItemViewModelSelected.OrderInfo, Mode=TwoWay}" x:Name="request" Margin="20" Height="200"
                                      PlaceholderText="Indtast ordre informationer"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
@@ -107,31 +107,31 @@
                                             <RowDefinition Height="1*" />
                                         </Grid.RowDefinitions>
 
-                                        <TextBox Grid.Column="0"  Grid.Row="0" Header="Mål" x:Name="Mål" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="0" Header="Mål" Text="{Binding ItemViewModelSelected.Measurements2, Mode=TwoWay}" x:Name="Mål" Margin="20" 
                                              PlaceholderText="Indtast Mål" />
 
-                                        <TextBox Grid.Column="1"  Grid.Row="0" Header="Antal" x:Name="Antal" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="0" Header="Antal" Text="{Binding ItemViewModelSelected.NumberOfItems, Mode=TwoWay}" x:Name="Antal" Margin="20" 
                                              PlaceholderText="Indtast Antal" />
 
-                                        <TextBox Grid.Column="2"  Grid.Row="0" Header="Mål" x:Name="Mål2" Margin="20" 
+                                        <TextBox Grid.Column="2"  Grid.Row="0" Header="Mål" Text="{Binding ItemViewModelSelected.Measurements, Mode=TwoWay}" x:Name="Mål2" Margin="20" 
                                              PlaceholderText="Indtast Mål" />
 
-                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="Medie" x:Name="Medie" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="1" Header="Medie" Text="{Binding ItemViewModelSelected.Media1, Mode=TwoWay}" x:Name="Medie" Margin="20" 
                                              PlaceholderText="Indtast Medie" />
 
-                                        <TextBox Grid.Column="1"  Grid.Row="1" Header="Laminat" x:Name="Laminat" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="1" Header="Laminat" Text="{Binding ItemViewModelSelected.Laminat2, Mode=TwoWay}" x:Name="Laminat" Margin="20" 
                                              PlaceholderText="Indtast Laminat" />
 
-                                        <TextBox Grid.Column="2"  Grid.Row="1" Header="Pris" x:Name="Price" Margin="20" 
+                                        <TextBox Grid.Column="2"  Grid.Row="1" Header="Pris" Text="{Binding ItemViewModelSelected.Price, Mode=TwoWay}" x:Name="Price" Margin="20" 
                                              PlaceholderText="Indtast Pris" />
 
-                                        <TextBox Grid.Column="0"  Grid.Row="2" Header="Medie" x:Name="Medie2" Margin="20" 
+                                        <TextBox Grid.Column="0"  Grid.Row="2" Header="Medie" Text="{Binding ItemViewModelSelected.Media2, Mode=TwoWay}" x:Name="Medie2" Margin="20" 
                                              PlaceholderText="Indtast Medie" />
 
-                                        <TextBox Grid.Column="1"  Grid.Row="2" Header="Laminat" x:Name="Laminat2" Margin="20" 
+                                        <TextBox Grid.Column="1"  Grid.Row="2" Header="Laminat" Text="{Binding ItemViewModelSelected.Laminat1, Mode=TwoWay}" x:Name="Laminat2" Margin="20" 
                                              PlaceholderText="Indtast Laminat" />
 
-                                        <TextBox Grid.Column="2"  Grid.Row="2" Header="Dtp Pris" x:Name="DtpPrice" Margin="20" 
+                                        <TextBox Grid.Column="2"  Grid.Row="2" Header="Dtp Pris" Text="{Binding ItemViewModelSelected.DtpPrice, Mode=TwoWay}" x:Name="DtpPrice" Margin="20" 
                                              PlaceholderText="Indtast Dtp Pris" />
                                     </Grid>
                                     <Grid>
@@ -140,7 +140,7 @@
                                             <ColumnDefinition Width="30*" />
                                         </Grid.ColumnDefinitions>
 
-                                        <TextBox Grid.Column="0" Header="Special ordre" x:Name="CustomOrder" Margin="20" Height="200"
+                                        <TextBox Grid.Column="0" Header="Special ordre" Text="{Binding ItemViewModelSelected.SpecialOrderInfo, Mode=TwoWay}" x:Name="CustomOrder" Margin="20" Height="200"
                                          PlaceholderText="Indtast special ordre informationer"
                                          TextWrapping="Wrap"
                                          AcceptsReturn="True"/>

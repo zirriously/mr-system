@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Commands\Customer\DeleteCustomerCommand.cs" />
     <Compile Include="Commands\Customer\NewCustomerCommand.cs" />
+    <Compile Include="Commands\Customer\RefreshCustomerCommand.cs" />
     <Compile Include="Commands\Customer\SaveCustomerCommand.cs" />
     <Compile Include="Commands\Order\DeleteOrderCommand.cs" />
     <Compile Include="Commands\Order\NewOrderCommand.cs" />

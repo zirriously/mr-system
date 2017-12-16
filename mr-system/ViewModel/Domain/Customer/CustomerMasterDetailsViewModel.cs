@@ -15,6 +15,7 @@ namespace mr_system
         private DeleteCustomerCommand _deleteCommand;
         private NewCustomerCommand _newCommand;
         private SaveCustomerCommand _saveCommand;
+        private RefreshCustomerCommand _refreshCommand;
 
         public CustomerMasterDetailsViewModel()
         {
@@ -23,6 +24,7 @@ namespace mr_system
             _deleteCommand = new DeleteCustomerCommand(_catalog, this);
             _newCommand = new NewCustomerCommand(_catalog, this);
             _saveCommand = new SaveCustomerCommand(_catalog);
+            _refreshCommand = new RefreshCustomerCommand(this, _catalog);
             RefreshCustomerItemViewModelCollection();
             _catalog.Load();
         }
@@ -65,6 +67,11 @@ namespace mr_system
         public ICommand SaveCommand
         {
             get { return _saveCommand; }
+        }
+
+        public ICommand RefreshCommand
+        {
+            get { return _refreshCommand; }
         }
 
         public CustomerItemViewModel ItemViewModelSelected
