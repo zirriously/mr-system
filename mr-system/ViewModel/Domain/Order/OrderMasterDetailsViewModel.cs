@@ -14,6 +14,7 @@ namespace mr_system
         private DeleteOrderCommand _deleteCommand;
         private NewOrderCommand _newOrderCommand;
         private SaveOrderCommand _saveCommand;
+        private RefreshOrderCommand _refreshCommand;
 
         public OrderMasterDetailsViewModel()
         {
@@ -22,6 +23,7 @@ namespace mr_system
             _deleteCommand = new DeleteOrderCommand(_catalog, this);
             _newOrderCommand = new NewOrderCommand(_catalog, this);
             _saveCommand = new SaveOrderCommand(_catalog);
+            _refreshCommand = new RefreshOrderCommand(this, _catalog);
             _catalog.Load();
         }
 
@@ -59,6 +61,11 @@ namespace mr_system
         public ICommand SaveCommand
         {
             get { return _saveCommand; }
+        }
+
+        public ICommand RefreshCommand
+        {
+            get { return _refreshCommand; }
         }
         public void RefreshOrderItemViewModelCollection()
         {

@@ -45,6 +45,7 @@
                     <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Click="NewOrderButton_Click"/>
                     <AppBarButton Height="50" Label="Rediger ordre" Icon="Edit"/>
                     <AppBarButton Height="50" Label="Slet ordre" Icon="Delete" Command="{Binding DeleteCommand}"/>
+                    <AppBarButton Height="50" Label="Refresh" Icon="Refresh" Command="{Binding RefreshCommand}"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1">
