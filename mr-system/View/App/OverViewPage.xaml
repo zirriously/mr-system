@@ -92,7 +92,7 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="0,50,0,0" Width="auto" HorizontalAlignment="Center">
                                 <TextBlock Text="Ordre kalender" FontSize="25" HorizontalAlignment="left"/>
-                                <CalendarView Margin="20" Width="500" Height="650"/>
+                                <CalendarView Margin="20" Width="450" Height="500"/>
                             </StackPanel>
                         </Grid>
                     </StackPanel>
