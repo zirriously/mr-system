@@ -48,13 +48,51 @@
                                 <ColumnDefinition Width="2*" />
                                 <ColumnDefinition Width="2*" />
                             </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Column="0" Margin="0,50,0,0" Width="auto" HorizontalAlignment="Center">
+                            <StackPanel Grid.Column="0" Margin="0,50,0,0" Width="600" HorizontalAlignment="Center">
                                 <TextBlock Text="Senest opdateret ordrer (Liste)" FontSize="25"/>
-
+                                <ScrollViewer>
+                                    <StackPanel >
+                                        <ListView >
+                                            <ListView.HeaderTemplate>
+                                                <DataTemplate>
+                                                    <Grid Padding="12">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="1*"/>
+                                                            <ColumnDefinition Width="1*"/>
+                                                            <ColumnDefinition Width="1*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock HorizontalAlignment="Center" Grid.Column="0" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" Text="Sagsbenhandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                                        <TextBlock HorizontalAlignment="Center" Grid.Column="2" Text="Ændret den." Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListView.HeaderTemplate>
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="1*"/>
+                                                            <ColumnDefinition Width="1*"/>
+                                                            <ColumnDefinition Width="1*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Grid.Column="0" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Order}"/>
+                                                        <TextBlock Grid.Column="1" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding CaseOwner}" />
+                                                        <TextBlock Grid.Column="2" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding DateChanged}"/>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                            <ListView.ItemContainerStyle>
+                                                <Style TargetType="ListViewItem">
+                                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                                </Style>
+                                            </ListView.ItemContainerStyle>
+                                        </ListView>
+                                    </StackPanel>
+                                </ScrollViewer>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="0,50,0,0" Width="auto" HorizontalAlignment="Center">
                                 <TextBlock Text="Ordre kalender" FontSize="25" HorizontalAlignment="left"/>
-                                <CalendarView Margin="20" Width="500" Height="650"/>
+                                <CalendarView Margin="20" Width="450" Height="500"/>
                             </StackPanel>
                         </Grid>
                     </StackPanel>
