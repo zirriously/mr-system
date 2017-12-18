@@ -8,60 +8,60 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView  ItemsSource="{}">
-            <ListView.HeaderTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100*"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Style="{StaticResource TitleTextBlockStyle}"
-                               Height="50"
-                               FontSize="28"
-                               VerticalAlignment="Center"
-                               Text="Velkommen"
-                               Margin="10,15,0,0"/>
+        <ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
 
-                            <CommandBar Grid.Column="1"
-                                Height="50"
-                                HorizontalAlignment="Right"
-                                VerticalAlignment="Center"
-                                DefaultLabelPosition="Right"
-                                Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                                <AppBarButton Height="50" Label="Ny ordre" Icon="Add" Click="Button_ClickNewOrder"/>
-                                <AppBarButton Height="50" Label="Ny kunde" Icon="Add" Click="Button_ClickNewCustomer"/>
-                            </CommandBar>
-                        </Grid>
-                    </Grid>
-                </DataTemplate>
-            </ListView.HeaderTemplate>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Column="0">
-                            <StackPanel>
-                                
-                            </StackPanel>
-                        </Grid>
-                        <Grid Column="1">
-                            <StackPanel>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
 
-                            </StackPanel>
-                        </Grid>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Velkommen" 
+                        HorizontalAlignment="left" 
+                        FontSize="28"
+                        Height="50">
+                    </TextBlock>
+
+                    <CommandBar Grid.Column="1"
+                                        Height="50"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        DefaultLabelPosition="Right"
+                                        Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+                        <AppBarButton Height="50" Label="Opret ny ordre" Icon="Add" Click="Button_ClickNewOrder"/>
+                        <AppBarButton Height="50" Label="Opret ny kunde" Icon="Add" Click="Button_ClickNewCustomer"/>
+                    </CommandBar>
+                </Grid>
+                <Grid Grid.Row="1" Margin="20">
+                    <StackPanel>
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,0,0" Width="auto" HorizontalAlignment="Center">
+                                    <TextBlock Text="Senest opdateret ordrer" FontSize="25"/>
+                                    
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="0,20,0,0" Width="auto" HorizontalAlignment="Center">
+                                    <TextBlock Text="Ordre kalender" FontSize="25" HorizontalAlignment="Center"/>
+                                <CalendarView Margin="20" Width="500" Height="650"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
