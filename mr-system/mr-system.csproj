@@ -100,6 +100,7 @@
     <Compile Include="Commands\Customer\RefreshCustomerCommand.cs" />
     <Compile Include="Commands\Customer\SaveCustomerCommand.cs" />
     <Compile Include="Commands\Order\DeleteOrderCommand.cs" />
+    <Compile Include="Commands\Customer\EditCustomerCommand.cs" />
     <Compile Include="Commands\Order\NewOrderCommand.cs" />
     <Compile Include="Commands\Order\RefreshOrderCommand.cs" />
     <Compile Include="Commands\Order\SaveOrderCommand.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Model\Domain\Customer\CustomerCatalog.cs" />
     <Compile Include="Model\Domain\Order\OrderCatalog.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\App\SelectedItem.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerItemViewModel.cs" />
     <Compile Include="ViewModel\Domain\Customer\CustomerMasterDetailsViewModel.cs" />
     <Compile Include="Model\Domain\Customer\Customer.cs" />
@@ -168,7 +170,6 @@
     <Folder Include="DLL\" />
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
-    <Folder Include="ViewModel\App\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\App\MainPage.xaml">

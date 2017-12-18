@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mrSystem="using:mr_system"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="CustomerOverViewPage_OnLoaded">
 
     <Page.DataContext>
         <mrSystem:CustomerMasterDetailsViewModel/>
@@ -44,7 +45,7 @@
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
                     <AppBarButton Height="50" Label="Opret ny kunde" Icon="Add" Click="NewCustomerButton_Click"/>
-                    <AppBarButton Height="50" Label="Rediger kunde" Icon="Edit"/>
+                    <AppBarButton Height="50" Label="Rediger kunde" Icon="Edit" Click="ButtonBase_OnClick"/>
                     <AppBarButton Height="50" Label="Slet kunde" Icon="Delete" Command="{Binding DeleteCommand}"/>
                     <AppBarButton Height="50" Label="Refresh" Icon="Refresh" Command="{Binding RefreshCommand}"/>
                 </CommandBar>
