@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mrSystem="using:mr_system"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="OrderPage_OnLoaded">
 
     <Page.DataContext>
         <mrSystem:OrderMasterDetailsViewModel/>
@@ -45,8 +46,8 @@
                                         VerticalAlignment="Center"
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                    <AppBarButton Visibility="Visible" Name="OrderSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
-                    <AppBarButton Visibility="Visible" Name="OrderAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="OrderSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}" Click="OrderSaveBtn_OnClick"/>
+                    <AppBarButton Visibility="Visible" Name="OrderAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}" Click="OrderAddBtn_OnClick"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">

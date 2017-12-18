@@ -17,10 +17,12 @@ namespace mr_system
         private SaveOrderCommand _saveCommand;
         private RefreshOrderCommand _refreshCommand;
 
+
         public OrderMasterDetailsViewModel()
         {
             _catalog = new OrderCatalog();
             _orderItemViewModelSelected = new OrderItemViewModel(new Orders());
+
             _deleteCommand = new DeleteOrderCommand(_catalog, this);
             _newOrderCommand = new NewOrderCommand(_catalog, this);
             _saveCommand = new SaveOrderCommand(_catalog);
@@ -43,6 +45,25 @@ namespace mr_system
             set
             {
                 _orderItemViewModelSelected = value;
+                if (_orderItemViewModelSelected != null)
+                {
+                    Singleton.Instance.CaseOwner = _orderItemViewModelSelected.CaseOwner;
+                    Singleton.Instance.OrderName = _orderItemViewModelSelected.OrderName;
+                    Singleton.Instance.OrderInfo = _orderItemViewModelSelected.OrderInfo;
+                    Singleton.Instance.Price = _orderItemViewModelSelected.Price;
+                    Singleton.Instance.Materials = _orderItemViewModelSelected.Materials;
+                    Singleton.Instance.Production = _orderItemViewModelSelected.Production;
+                    Singleton.Instance.Measurements1 = _orderItemViewModelSelected.Measurements;
+                    Singleton.Instance.Measurements2 = _orderItemViewModelSelected.Measurements2;
+                    Singleton.Instance.NumberOfItems = _orderItemViewModelSelected.NumberOfItems;
+                    Singleton.Instance.Delivery = _orderItemViewModelSelected.DeliveryInfo;
+                    Singleton.Instance.Media1 = _orderItemViewModelSelected.Media1;
+                    Singleton.Instance.Media2 = _orderItemViewModelSelected.Media2;
+                    Singleton.Instance.Laminat1 = _orderItemViewModelSelected.Laminat1;
+                    Singleton.Instance.Laminat2 = _orderItemViewModelSelected.Laminat2;
+                    Singleton.Instance.DtpPrice = _orderItemViewModelSelected.DtpPrice;
+                    Singleton.Instance.SpecialOrderInfo = _orderItemViewModelSelected.SpecialOrderInfo;
+                }
                 OnPropertyChanged();
                 _deleteCommand.RaiseCanExecuteChanged();
                 

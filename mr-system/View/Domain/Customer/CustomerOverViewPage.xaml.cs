@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -50,9 +51,16 @@ namespace mr_system.View
             Singleton.Instance.Selected = true;
         }
 
-        private void CustomerOverViewPage_OnLoaded(object sender, RoutedEventArgs e)
+        private async void CustomerOverViewPage_OnLoaded(object sender, RoutedEventArgs e)
         {
-            mdvm.RefreshCustomerItemViewModelCollection();
+            await Refresh();
+        }
+
+        private Task Refresh()
+        {
+
+            mdvm.RefreshCommand.Execute(mdvm);
+            return Task.CompletedTask;
         }
     }
 }
