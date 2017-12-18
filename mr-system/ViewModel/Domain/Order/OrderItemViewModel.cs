@@ -110,6 +110,16 @@ namespace mr_system
             }
         }
 
+        public int Key
+        {
+            get { return _domainObject.Key; }
+            set
+            {
+                _domainObject.Key = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string Media1
         {
             get { return _domainObject.Media1; }

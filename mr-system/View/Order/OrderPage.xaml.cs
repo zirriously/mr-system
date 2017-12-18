@@ -70,5 +70,15 @@ namespace mr_system.View.Order
                 CustomOrder.Text = Singleton.Instance.SpecialOrderInfo;
             }
         }
+
+        private void OrderSaveBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OrderOverviewPage));
+        }
+
+        private void OrderAddBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OrderOverviewPage));
+        }
     }
 }
