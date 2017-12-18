@@ -50,5 +50,40 @@ namespace mr_system.ViewModel.App
         public string Info { get; set; }
 
         public bool Selected { get; set; }
+
+        public string CaseOwner { get; set; }
+
+        public string OrderName { get; set; }
+
+        public string OrderInfo { get; set; }
+
+        public string Price { get; set; }
+
+        public string Materials { get; set; }
+
+        public string Production { get; set; }
+
+        public string Measurements1 { get; set; }
+
+        public string Measurements2 { get; set; }
+
+        public string NumberOfItems { get; set; }
+
+        public string Delivery { get; set; }
+
+        public string Media1 { get; set; }
+
+        public string Media2 { get; set; }
+
+        public string Laminat1 { get; set; }
+
+        public string Laminat2 { get; set; }
+
+        public string DtpPrice { get; set; }
+
+        public string SpecialOrderInfo { get; set; }
+
+        public bool OrderSelected { get; set; }
+
     }
 }

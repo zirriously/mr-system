@@ -81,16 +81,19 @@ namespace mr_system
             set
             {
                 _customerItemViewModel = value;
-                Singleton.Instance.Key = _customerItemViewModel.Key;
-                Singleton.Instance.Cvr = _customerItemViewModel.CVR;
-                Singleton.Instance.Address = _customerItemViewModel.Address;
-                Singleton.Instance.AreaCode = _customerItemViewModel.AreaCode;
-                Singleton.Instance.City = _customerItemViewModel.City;
-                Singleton.Instance.Email = _customerItemViewModel.EmailAddress;
-                Singleton.Instance.FirstName = _customerItemViewModel.FirstName;
-                Singleton.Instance.LastName = _customerItemViewModel.LastName;
-                Singleton.Instance.Phone = _customerItemViewModel.PhoneNumber;
-                Singleton.Instance.Info = _customerItemViewModel.Info;
+                if (_customerItemViewModel != null)
+                {
+                    Singleton.Instance.Key = _customerItemViewModel.Key;
+                    Singleton.Instance.Cvr = _customerItemViewModel.CVR;
+                    Singleton.Instance.Address = _customerItemViewModel.Address;
+                    Singleton.Instance.AreaCode = _customerItemViewModel.AreaCode;
+                    Singleton.Instance.City = _customerItemViewModel.City;
+                    Singleton.Instance.Email = _customerItemViewModel.EmailAddress;
+                    Singleton.Instance.FirstName = _customerItemViewModel.FirstName;
+                    Singleton.Instance.LastName = _customerItemViewModel.LastName;
+                    Singleton.Instance.Phone = _customerItemViewModel.PhoneNumber;
+                    Singleton.Instance.Info = _customerItemViewModel.Info;
+                }
                 OnPropertyChanged();
                 _deleteCommand.RaiseCanExecuteChanged();
             }
