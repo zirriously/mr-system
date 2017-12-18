@@ -62,7 +62,7 @@
                                                             <ColumnDefinition Width="1*"/>
                                                         </Grid.ColumnDefinitions>
                                                         <TextBlock HorizontalAlignment="Center" Grid.Column="0" Text="Order" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" Text="Sagsbenhandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" Text="Sagsbehandler" Style="{ThemeResource CaptionTextBlockStyle}"/>
                                                         <TextBlock HorizontalAlignment="Center" Grid.Column="2" Text="Ændret den." Style="{ThemeResource CaptionTextBlockStyle}"/>
                                                     </Grid>
                                                 </DataTemplate>
