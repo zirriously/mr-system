@@ -36,5 +36,10 @@ namespace mr_system.View.Domain.Customer
         {
             this.Frame.Navigate(typeof(CustomerPage));
         }
+
+        private void CustAddBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CustomerOverViewPage));
+        }
     }
 }
