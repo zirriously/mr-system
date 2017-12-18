@@ -46,7 +46,7 @@
                                         DefaultLabelPosition="Right"
                                         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
                     <AppBarButton Visibility="Visible" Name="CustSaveBtn" Height="50" Label="Gem" Icon="Save" Command="{Binding SaveCommand}"/>
-                    <AppBarButton Visibility="Visible" Name="CustAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}"/>
+                    <AppBarButton Visibility="Visible" Name="CustAddBtn" Height="50" Label="Opret" Icon="Add" Command="{Binding NewCommand}" Click="CustAddBtn_OnClick"/>
                 </CommandBar>
             </Grid>
             <Grid Grid.Row="1" Margin="20">
